@@ -47,19 +47,58 @@
     <!-- first section logo +log in form -->
     <div id="firstsection">
         <div class="bg-img">
-            <form action="/action_page.php" class="container">
-                <h1>Login</h1>
-
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit" class="btn">Login</button>
-            </form>
         </div>
+        <button class="open-button" onclick="openForm()">registration</button>
     </div>
+    <!--registeration form-->
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <img src="./assets/pic.png" id="signup_img">
+            <div class="pargraphs">
+                <h3>Enter your Phone Number</h3>
+                <p> Confirm your Country Code and Enter your Phone Number.</p>
+            </div>
+            <select name="country_code" id="country_code">
+                <option value=”+970”>+970</option>
+                <option value=”+972”>+972</option>
+            </select>
+            
+            <input type="text" placeholder="Phone Number" name="phoneno" required>
+            <div class="form">
+                <div class="inputfield">
+                   <label>First Name</label>
+                   <input type="text"  placeholder="first name" name="first name" required>
+                </div>  
+                 <div class="inputfield">
+                   <label>Last Name</label>
+                   <input type="text" placeholder="last name" name="last name" required>
+                </div>  
+                </div>
+            
+                <label for="country">Country</label>
+                 <select id="country" name="country">
+                 <option value="Nablus">Nablus</option>
+                 <option value="Ramallah">Ramallah</option>
+                  <option value="jenin">jenin</option>
+                 </select>
+            
+            
+
+                 
+            
+            <button type="submit" class="btn">Go ahead</button>
+            <p style="text-align:center;"> Don't have an accout?<a href="#" id="log"> login</a> </p>
+        </form>
+    </div>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
 
     <!-- services section -->
     <div class="services" id="services">

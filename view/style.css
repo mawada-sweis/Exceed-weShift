@@ -24,7 +24,82 @@ To use it:
     --yellow-Dark-color: #FFB703;
     --yellow-2-color: #FFD15C;
 }
-
+/*registrion*/
+.open-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+  }
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    border: 3px solid #f1f1f1;
+    margin: 0 auto;
+    height: 50%;
+    width: 25%;
+    top: 30%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+  }
+  /* Add styles to the form container */
+  .form-container {  
+    padding: 5%;
+    background-color: white;
+  }
+  #signup_img{
+    border-radius: 8px;
+    height: 20%;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .pargraphs{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: smaller;
+  }
+  #country_code{
+      border: none;
+      width: auto;
+      font-size: 30;
+      border: none;
+  }
+  .form{
+      display: inline;
+  }
+  
+  
+  /* Full-width input fields */
+  .form-container input[type=text] {
+    padding: 10px;
+    background: white;
+    width: 80%;
+    border: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #219EBC;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:5%;
+    margin-top: 10%;
+    font-size: larger;
+  }
+  #reg{
+      color: #FB8500;
+      text-decoration: none;
+  }
+  
 
 /*first section Need to edit */
 
@@ -105,7 +180,6 @@ nav {
 }
 
 .max-width h1 {
-    position: relative;
     text-align: center;
     font-size: 40px;
     font-weight: 500;
