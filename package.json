@@ -1,0 +1,19 @@
+{
+  "name": "weshift",
+  "version": "1.0.0",
+  "description": "WeShift is a website for ordering taxis in a new way for our Palestinian society.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mawada-sweis/Exceed-weShift.git"
+  },
+  "author": "Mawada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mawada-sweis/Exceed-weShift/issues"
+  },
+  "homepage": "https://github.com/mawada-sweis/Exceed-weShift#readme"
+}
