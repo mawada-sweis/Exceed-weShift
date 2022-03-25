@@ -1,22 +1,115 @@
 /* Main CSS page */
 
+
 /* Fonts */
-body{
+
+body {
     font-family: 'El Messiri', sans-serif;
 }
+
+
 /* Colors 
 To use it: 
     color: var(--mawada-color);
 */
-:root{
+
+:root {
     --main-color: #06c;
-    --blue-Dark-color:#023047;
+    --blue-Dark-color: #023047;
     --blue-2-color: #1C5D99;
-    --blue-3-color:#219EBC;
+    --blue-3-color: #219EBC;
     --blue-light-color: #8ECAE6;
     --orange-Dark-color: #FB8500;
-    --orange-2-color:#FD9E02;
-    --yellow-Dark-color:#FFB703;
-    --yellow-2-color:#FFD15C;
+    --orange-2-color: #FD9E02;
+    --yellow-Dark-color: #FFB703;
+    --yellow-2-color: #FFD15C;
 }
 
+
+/* services*/
+
+nav {
+    margin-left: 5%;
+}
+
+.active .nav-link:hover {
+    color: var(--orange-Dark-color)
+}
+
+.services {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 45px;
+    margin: auto;
+}
+
+.max-width h1 {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    background: var(--blue-2-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    user-select: none;
+    width: calc(26% - 20px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background: #ffffff;
+}
+
+.box {
+    transition: all 0.3s ease;
+}
+
+.card:hover .box {
+    transform: scale(1.05);
+}
+
+.box i {
+    font-size: 50px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.card:hover .box i {
+    color: var(--orange-Dark-color);
+}
+
+.box h3 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px;
+}
+
+.box:hover h3 {
+    color: var(--orange-Dark-color);
+}
+
+.box p {
+    color: #ffffff;
+}
+
+.box:hover p {
+    color: #000000;
+}
