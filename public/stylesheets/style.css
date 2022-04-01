@@ -57,6 +57,52 @@ body{
 }
 
 /* About Us */
+.about-section{
+	width: 100%;
+	background-color: var(--yellow-2-color);
+}
+
+.container {
+  padding: 16px;
+}
+
+@media screen and (max-width: 768px){
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+  }
+}
+.content-section .title{
+	text-transform: uppercase;
+  text-align: center;
+	font-size: 28px;
+  margin-top: 2%;
+}
+
+#image-section{
+  float: right;
+  height: 15%;
+  width: 15%;
+}
+
+.content{
+  width: 55%;
+  margin-bottom: 2%;
+}
+
+.content h3{
+	margin-top: 20px;
+	color:#5d5d5d;
+	font-size: 21px;
+}
+
+.content p{
+	margin-top: 10px;
+	font-size: 18px;
+	line-height: 1.5;
+}
 
 /* Contact Us */
 

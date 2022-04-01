@@ -23,3 +23,7 @@ console.log(`App listening on port ${app.get('port')}!`);
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/public/view/index.html');
 });
+
+app.post("/checkCode", (req,res)=>{
+    console.log("HI");
+})
