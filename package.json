@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mawada-sweis/Exceed-weShift/issues"
   },
-  "homepage": "https://github.com/mawada-sweis/Exceed-weShift#readme"
+  "homepage": "https://github.com/mawada-sweis/Exceed-weShift#readme",
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  }
 }
