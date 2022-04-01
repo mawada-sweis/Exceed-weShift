@@ -32,6 +32,29 @@ body{
 }
 
 /* Service */
+.card {
+  background: var(--blue-2-color);
+  border-radius: 6px;
+  user-select: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.card:hover {
+  background: #ffffff;
+  color: black;
+  transform: scale(1.05);
+}
+
+.card svg {
+  font-size: 50px;
+  margin-top: 10%;
+  color: var(--orange-Dark-color);
+}
+
+.card:hover p {
+  color: #000000;
+}
 
 /* About Us */
 
