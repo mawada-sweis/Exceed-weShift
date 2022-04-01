@@ -1,0 +1,47 @@
+h1 {
+    color: black;
+    font-family: "Nunito Sans", sans-serif;
+    margin: 60px 0 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+    a {
+        display: none
+    }
+}
+
+.container2 {
+    background-image: url(images/ContactUs.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+input[type=submit] {
+    background-color: orange;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: black;
+}
