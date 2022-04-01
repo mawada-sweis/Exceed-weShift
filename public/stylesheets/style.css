@@ -1,0 +1,326 @@
+/* Main CSS page */
+
+/* Fonts */
+body{
+  font-family: 'El Messiri', sans-serif;
+}
+
+/* Colors 
+To use it: 
+    color: var(--mawada-color);
+*/
+:root{
+  --main-color: #06c;
+  --blue-Dark-color:#023047;
+  --blue-2-color: #1C5D99;
+  --blue-3-color:#219EBC;
+  --blue-light-color: #8ECAE6;
+  --orange-Dark-color: #FB8500;
+  --orange-2-color:#FD9E02;
+  --yellow-Dark-color:#FFB703;
+  --yellow-2-color:#FFD15C;
+}
+
+/* Authentication */
+#logo {
+  margin-top: -10%;
+  margin-bottom: -10%;
+  width: 70%;
+}
+
+.pargraphs {
+  margin-top: 20%;
+  margin-bottom: 5%;
+  font-size: smaller;
+}
+
+#country_code {
+  border: none;
+  width: auto;
+  font-size: 30;
+}
+
+.form-container {
+  margin-top: 10%;
+  margin-right: 15%;
+}
+
+.form-container input[type=text] {
+  padding: 10px;
+  width: 80%;
+  border: none;
+}
+
+#names {
+  padding: 10px;
+  width: 49%;
+  display: inline;
+}
+
+.form-container .btn {
+  background-color: #219EBC;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  font-size: larger;
+}
+
+#link {
+  color: #FB8500;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#city {
+  border: none;
+  padding: 10px;
+  top: 3%;
+}
+
+/* Navbar */
+.navbar {
+  padding-left: 35%;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  width: 100%;
+}
+
+/* Service */
+.card {
+  background: var(--blue-2-color);
+  border-radius: 6px;
+  user-select: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.card:hover {
+  background: #ffffff;
+  color: black;
+  transform: scale(1.05);
+}
+
+.card svg {
+  font-size: 50px;
+  margin-top: 10%;
+  color: var(--orange-Dark-color);
+}
+
+.card:hover p {
+  color: #000000;
+}
+
+/* About Us */
+.about-section{
+	width: 100%;
+	background-color: var(--yellow-2-color);
+}
+
+.container {
+  padding: 16px;
+}
+
+@media screen and (max-width: 768px){
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+  }
+}
+.content-section .title{
+	text-transform: uppercase;
+  text-align: center;
+	font-size: 28px;
+  margin-top: 2%;
+}
+
+#image-section{
+  float: right;
+  height: 15%;
+  width: 15%;
+}
+
+.content{
+  width: 55%;
+  margin-bottom: 2%;
+}
+
+.content h3{
+	margin-top: 20px;
+	color:#5d5d5d;
+	font-size: 21px;
+}
+
+.content p{
+	margin-top: 10px;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+/* Contact Us */
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+button {
+	outline: none;
+	border: none;
+	background: var(--blue-3-color);
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.contact-section {
+  width: 790px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 72px 55px 90px 55px;
+  margin-left: 25%;
+}
+
+.contact2-form-title {
+  display: block;
+  font-size: 39px;
+  color: black;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.wrap-input2 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+}
+
+.input2 {
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+}
+
+.focus-input2 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+}
+
+.focus-input2::after {
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+
+  font-size: 13px;
+  color: #999999;
+  line-height: 1.2;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+textarea.input2 {
+  min-height: 115px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+textarea.input2 + .focus-input2::after {
+  top: 16px;
+  left: 0;
+}
+
+.input2:focus + .focus-input2::after {
+  top: -13px;
+}
+
+.input2:focus + .focus-input2::before {
+  width: 100%;
+}
+
+.container-contact2-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 13px;
+}
+
+.wrap-contact2-form-btn {
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 2px;
+  width: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.contact2-form-bgbtn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+}
+
+.contact2-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 244px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+@media (max-width: 576px) {
+  .wrap-contact2 {
+    padding: 72px 15px 90px 15px;
+  }
+}
