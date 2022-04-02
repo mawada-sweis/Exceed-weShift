@@ -41,45 +41,75 @@
       </div>
     </nav>
     <!-- Authentication Section-->
-    <!-- Sign Up section -->
-    <div id="signup">
-      <button class="open-button" onclick="openForm()">registration</button>
-      <div class="form-popup" id="myForm">
-          <form class="form-container">
-              <div class="pargraphs">
-                  <h3>Enter your Email</h3>
-              </div>
-              <input type="text" placeholder="example@domain.com" name="email" id="email" required>
-              <div class="form">
-                  <div class="inputfield">
-                     <label>First Name</label>
-                     <input type="text"  placeholder="first name" name="first-name" id="first-name" required>
-                  </div>  
-                   <div class="inputfield">
-                     <label>Last Name</label>
-                     <input type="text" placeholder="last name" name="last-name" id="last-name" required>
-                  </div>  
-              
-                  <label for="country">Country</label>
-                   <select id="country" name="country">
-                   <option value="Nablus">Nablus</option>
-                   <option value="Ramallah">Ramallah</option>
-                    <option value="jenin">jenin</option>
-                   </select>
-              <button type="submit" class="btn">Go ahead</button>
-              <p style="text-align:center;"> Don't have an accout?<a href="#" id="log"> login</a> </p>
+    <!-- Login section -->
+    <div id="login-section">
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-8">
+          <img src="../images/Logo.png" id="logo" />
+        </div>
+        <div class="col-sm-5 col-md-5 col-lg-4" id="current">
+          <form
+            class="form-container"
+            name="form1"
+            id="enterSite"
+            action="/login"
+            method="post"
+          >
+            <div class="pargraphs">
+              <h3>Enter your Email</h3>
+            </div>
+            <input
+              type="text"
+              placeholder="example@domain.com"
+              autocomplete="one-time-code"
+              name="email"
+              id="email"
+              required
+            />
+            <!-- Sign up Section -->
+            <div id="hidden">
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="fullname"
+                id="fullname"
+              />
+              <select id="city" name="city">
+                <option value="Nablus">Nablus</option>
+                <option value="Ramallah">Ramallah</option>
+                <option value="Jenin">Jenin</option>
+                <option value="Tulkarm">Tulkarm</option>
+                <option value="Hebron">Hebron</option>
+                <option value="Jericho">Jericho</option>
+                <option value="Jerusalem">Jerusalem</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn" id="submit">Go ahead</button>
+            <p style="text-align: center; display: inline" id="question">
+              Don't have an account?
+            </p>
+            <a href="#" id="link" onclick="changeForm()"> Register now </a>
           </form>
+        </div>
       </div>
     </div>
-    
-
     <script>
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
-
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
+      function changeForm() {
+        var link = document.getElementById("link").innerHTML;
+        if (link == "Register now") {
+          document.getElementById("enterSite").action = "/register";
+          document.getElementById("question").innerHTML =
+            "Already have an account?";
+          document.getElementById("link").innerHTML = "Login now";
+          document.getElementById("hidden").style.display = "block";
+        } else {
+          document.getElementById("enterSite").action = "/login";
+          document.getElementById("question").innerHTML =
+            "Don't have an account?";
+          document.getElementById("link").innerHTML = "Register now";
+          document.getElementById("hidden").style.display = "none";
+        }
       }
     </script>
 
@@ -197,7 +227,7 @@
         <div class="content-section">
           <div class="title">
             <h1>About Us</h1>
-            <img id="image-section" src="../images/Logo.jpg" />
+            <img id="image-section" src="../images/taxi.jpg" />
           </div>
           <div class="content">
             <h3>Who We Are?</h3>

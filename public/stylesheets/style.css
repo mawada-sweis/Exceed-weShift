@@ -19,35 +19,14 @@ body{
 }
 
 /* Authentication */
-/* Sigup */
-.open-button {
-  background-color: #555;
-  color: white;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
+#logo {
+  margin-top: -10%;
+  margin-bottom: -10%;
+  width: 70%;
 }
 
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  border: 3px solid #f1f1f1;
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Add styles to the form container */
-.form-container {  
-  padding: 5%;
-  background-color: white;
-}
-
-.pargraphs{
-  margin-top: 10%;
+.pargraphs {
+  margin-top: 20%;
   margin-bottom: 5%;
   font-size: smaller;
 }
@@ -56,18 +35,25 @@ body{
     border: none;
     width: auto;
     font-size: 30;
-    border: none;
 }
 
-/* Full-width input fields */
+.form-container {
+  margin-top: 10%;
+  margin-right: 15%;
+}
+
 .form-container input[type=text] {
   padding: 10px;
-  background: white;
   width: 80%;
   border: none;
 }
 
-/* Set a style for the submit/login button */
+#names {
+  padding: 10px;
+  width: 49%;
+  display: inline;
+}
+
 .form-container .btn {
   background-color: #219EBC;
   color: white;
@@ -75,17 +61,25 @@ body{
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:5%;
+  margin-bottom: 5%;
   margin-top: 10%;
   font-size: larger;
 }
 
-#reg{
-    color: #FB8500;
-    text-decoration: none;
+#link {
+  color: #FB8500;
+  text-decoration: none;
 }
 
-/* Navbar */
+#hidden {
+  display: none;
+}
+
+#city {
+  border: none;
+  padding: 10px;
+  top: 3%;
+}
 
 /* Navbar */
 .navbar {
