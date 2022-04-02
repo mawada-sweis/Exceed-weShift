@@ -246,5 +246,42 @@
     </div>
 
     <!-- Contact Us Section -->
+    <div class="contact-section" id="contact-section">
+      <form>
+        <span class="contact2-form-title"> Contact Us </span>
+        <div class="wrap-input2">
+          <textarea
+            class="input2"
+            name="message"
+            id="input2"
+            required
+          ></textarea>
+          <span class="focus-input2" data-placeholder="MESSAGE"></span>
+        </div>
+
+        <div class="container-contact2-form-btn">
+          <div class="wrap-contact2-form-btn">
+            <div class="contact2-form-bgbtn"></div>
+            <button class="contact2-form-btn" onclick="sendMail();">
+              Send Your Message
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+      function sendMail() {
+        var link =
+          "mailto:exceed2022web@gmail.com" +
+          "?cc=" +
+          encodeURIComponent() +
+          "&subject=" +
+          encodeURIComponent("Contact with me") +
+          "&body=" +
+          encodeURIComponent(document.getElementById("input2").value);
+        window.location.href = link;
+      }
+    </script>
   </body>
 </html>
