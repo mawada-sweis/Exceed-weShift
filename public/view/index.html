@@ -40,8 +40,48 @@
         </div>
       </div>
     </nav>
+    <!-- Authentication Section-->
+    <!-- Sign Up section -->
+    <div id="signup">
+      <button class="open-button" onclick="openForm()">registration</button>
+      <div class="form-popup" id="myForm">
+          <form class="form-container">
+              <div class="pargraphs">
+                  <h3>Enter your Email</h3>
+              </div>
+              <input type="text" placeholder="example@domain.com" name="email" id="email" required>
+              <div class="form">
+                  <div class="inputfield">
+                     <label>First Name</label>
+                     <input type="text"  placeholder="first name" name="first-name" id="first-name" required>
+                  </div>  
+                   <div class="inputfield">
+                     <label>Last Name</label>
+                     <input type="text" placeholder="last name" name="last-name" id="last-name" required>
+                  </div>  
+              
+                  <label for="country">Country</label>
+                   <select id="country" name="country">
+                   <option value="Nablus">Nablus</option>
+                   <option value="Ramallah">Ramallah</option>
+                    <option value="jenin">jenin</option>
+                   </select>
+              <button type="submit" class="btn">Go ahead</button>
+              <p style="text-align:center;"> Don't have an accout?<a href="#" id="log"> login</a> </p>
+          </form>
+      </div>
+    </div>
+    
 
-    <!-- Login Section-->
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
 
     <!-- Service Section -->
     <div
@@ -157,7 +197,7 @@
         <div class="content-section">
           <div class="title">
             <h1>About Us</h1>
-            <img id="image-section" src="./assets/Logo.png" />
+            <img id="image-section" src="../images/Logo.jpg" />
           </div>
           <div class="content">
             <h3>Who We Are?</h3>
