@@ -15,9 +15,6 @@ router.post('/authentication/:id/login', auth_controller.login);
 // POST request for Sign up.
 router.post('/authentication/signup', auth_controller.signup);
 
-// POST request for Sending OTP Email.
-router.post('/authentication/:id/sendEmail', auth_controller.send_email);
-
 // POST request for Checking the user OTP Code.
 router.post('/authentication/:code/otp', auth_controller.check_otp);
 
