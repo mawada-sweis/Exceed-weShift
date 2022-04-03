@@ -1,4 +1,4 @@
-const con = require('./models/database');
+const con = require('../models/database');
 
 exports.login = (req, res) => {
     res.send('NOT IMPLEMENTED: login' + req.params.id);
