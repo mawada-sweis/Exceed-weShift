@@ -2,7 +2,7 @@ const con = require('../models/database');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-
+const Promise = require('promise');
 
 // Body Parser
 app.use(bodyParser.urlencoded({
@@ -22,25 +22,42 @@ exports.login = async (req, res) => {
     }
 };
 
-exports.signup = (req, res) => {
-    res.send('NOT IMPLEMENTED: signup' + req.body);
-};
+exports.signup = async (req, response) => {
+    let email = req.body.email;
+    let name = req.body.fullname;
+    let city = req.body.city;
 
-function check_email(email) {
-
-    let AccountSql = 'SELECT * FROM Account WHERE AccountEmail = ?';
-
-    // Execute Customer SQL query
-    let result = con.query(AccountSql, [email]);
-
-    // If the account exists
-    if (result.length > 0) {
-        return 200;
+    let status = await check_email(email);
+    
+    // Account is already exist
+    if (status.length) {
+        response.redirect('/');
     }
     else {
-        return 404;
+        let saveEmailSql = 'INSERT INTO Account (AccountEmail, City, Name, situation) VALUES (?, ?, ?, ?)';
+        con.query(saveEmailSql, [email, city, name, 'Active'], (err, res) => {
+            if (err) throw err;
+            
+            // Insert operation Not Success
+            if (res.length > 0) {
+                response.redirect('/');
+            }
+            else {
+                send_email(email);
+            }
+        });
     }
 }
+
+const check_email = async email => new Promise((resolve, reject) => {
+    con.query(`SELECT AccountEmail FROM Account WHERE AccountEmail = ?`,
+        [email],
+        (err, result) => {
+            if (err) { reject(err); }
+            resolve(result);
+        }
+    )
+});
 
 access_level = (req, res) => {
     res.send('NOT IMPLEMENTED: access_level');
