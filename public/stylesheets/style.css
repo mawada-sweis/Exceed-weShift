@@ -31,12 +31,6 @@ body{
   font-size: smaller;
 }
 
-#country_code{
-    border: none;
-    width: auto;
-    font-size: 30;
-}
-
 .form-container {
   margin-top: 10%;
   margin-right: 15%;
@@ -69,6 +63,7 @@ body{
 #link {
   color: #FB8500;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #hidden {

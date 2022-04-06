@@ -52,7 +52,7 @@
             class="form-container"
             name="form1"
             id="enterSite"
-            action="/login"
+            action="/authentication/login"
             method="post"
           >
             <div class="pargraphs">
@@ -85,11 +85,11 @@
               </select>
             </div>
 
-            <button type="submit" class="btn" id="submit">Go ahead</button>
+            <button type="submit" class="btn" id="submit" onclick="return confirm('This email is not exist, please sign up and try again!');">Go ahead</button>
             <p style="text-align: center; display: inline" id="question">
               Don't have an account?
             </p>
-            <a href="#" id="link" onclick="changeForm()"> Register now </a>
+            <p id="link" onclick="changeForm();">Register now</p>
           </form>
         </div>
       </div>
@@ -98,13 +98,13 @@
       function changeForm() {
         var link = document.getElementById("link").innerHTML;
         if (link == "Register now") {
-          document.getElementById("enterSite").action = "/register";
+          document.getElementById("enterSite").action = "/authentication/signup";
           document.getElementById("question").innerHTML =
             "Already have an account?";
           document.getElementById("link").innerHTML = "Login now";
           document.getElementById("hidden").style.display = "block";
         } else {
-          document.getElementById("enterSite").action = "/login";
+          document.getElementById("enterSite").action = "/authentication/login";
           document.getElementById("question").innerHTML =
             "Don't have an account?";
           document.getElementById("link").innerHTML = "Register now";
@@ -269,7 +269,7 @@
         </div>
       </form>
     </div>
-    
+
     <script>
       function sendMail() {
         var link =
