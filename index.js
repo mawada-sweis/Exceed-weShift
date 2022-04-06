@@ -27,5 +27,11 @@ app.get("/", (req, res) => {
 // Import Index routes.
 var indexRouter = require('./routes/index');
 
+// Import Authentication routes
+var authRouter = require('./routes/authRouter');  
+
 // Using the index routes
 app.use('/', indexRouter);
+
+// Using the Authentication routes
+app.use('/authentication', authRouter);
