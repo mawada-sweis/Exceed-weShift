@@ -15,7 +15,8 @@ exports.login = async (req, res) => {
 
     let status = await check_email(email);
 
-    if (status == 200) {
+    // Account is already exist
+    if (status.length) {
         send_email(email);
     } else {
         res.redirect('/');
