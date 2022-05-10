@@ -12,7 +12,4 @@ router.post('/login', auth_controller.login);
 // POST request for Sign up.
 router.post('/signup', auth_controller.signup);
 
-// POST request for Checking the user OTP Code.
-router.post('/:code/otp', auth_controller.check_otp);
-
 module.exports = router;

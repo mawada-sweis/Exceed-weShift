@@ -20,7 +20,7 @@ exports.login = async (req, res) => {
     if (status.length) {
         send_email(email);
     } else {
-        res.redirect('/');
+        res.render('index', { msg: 'Express' });
     }
 };
 
@@ -28,12 +28,13 @@ exports.signup = async (req, response) => {
     let email = req.body.email;
     let name = req.body.fullname;
     let city = req.body.city;
+    const code = Math.floor(1000 + Math.random() * 9000);
 
     let status = await check_email(email);
-    
+
     // Account is already exist
     if (status.length) {
-        response.redirect('/');
+        response.status(200).json({ status: false });
     }
     else {
         let saveEmailSql = 'INSERT INTO Account (AccountEmail, City, Name, situation) VALUES (?, ?, ?, ?)';
@@ -41,14 +42,12 @@ exports.signup = async (req, response) => {
             if (err) throw err;
 
             // Insert operation Not Success
-            if (res.length > 0) {
-                response.redirect('/');
-            }
-            else {
-                send_email(email);
+            if (res.length == undefined) {
+                send_email(email, code);
             }
         });
     }
+    response.status(200).json({ status: true, code: code });
 }
 
 const check_email = async email => new Promise((resolve, reject) => {
@@ -65,10 +64,7 @@ access_level = (req, res) => {
     res.send('NOT IMPLEMENTED: access_level');
 };
 
-send_email = async (email) => {
-    const code = Math.floor(1000 + Math.random() * 9000);
-    
-    let testAccount = await nodemailer.createTestAccount();
+send_email = async (email,  code) => {
 
     // create reusable transporter object using the Gmail transport
     let transporter = nodemailer.createTransport({
@@ -90,7 +86,7 @@ send_email = async (email) => {
         subject: "OTP Code", // Subject line
         text: "Here is your OTD Code: "  + code // plain text body
     }).then(info => {
-        console.log("Some code to display otp page");
+        //console.log("Some code to display otp page");
     }).catch(console.error);
 };
 
