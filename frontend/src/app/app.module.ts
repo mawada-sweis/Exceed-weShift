@@ -13,6 +13,7 @@ import { LoginComponent } from './homepage/auth/login/login.component';
 import { OtpComponent } from './homepage/auth/otp/otp.component';
 import { SignupComponent } from './homepage/auth/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     AuthComponent,
     LoginComponent,
     SignupComponent,
-    OtpComponent
+    OtpComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
