@@ -12,6 +12,7 @@ import { AuthComponent } from './homepage/auth/auth.component';
 import { LoginComponent } from './homepage/auth/login/login.component';
 import { OtpComponent } from './homepage/auth/otp/otp.component';
 import { SignupComponent } from './homepage/auth/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SignupComponent } from './homepage/auth/signup/signup.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
