@@ -1,0 +1,28 @@
+<div class="form-container">
+  <form name="login" id="login">
+    <div class="pargraphs">
+      <h3>Welcome to <b>weShift</b></h3>
+    </div>
+    <input
+      type="text"
+      placeholder="Enter your Email here"
+      autocomplete="one-time-code"
+      name="email"
+      id="email"
+      formControlName="email"
+      class="input"
+      required
+    />
+
+    <button
+      type="submit"
+      class="btn btn-outline-primary"
+      id="submit"
+      routerLink="/login"
+    >
+      Go ahead
+    </button>
+    <span>Don't have an account?</span>
+    <a id="question" routerLink="/signup"> Register now </a>
+  </form>
+</div>
