@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class AuthComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void { }
+  code:number = 0;
+  isLogin = true;
+  isOTP = false;
+  getData(data: any) {
+    this.isOTP = data.status;
+    this.code = data.value;
+    if(this.isOTP){
+      this.isLogin = false;
+    }
   }
-
 }
