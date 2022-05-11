@@ -1,5 +1,5 @@
 <div class="form-container">
-  <form name="otp" id="otp">
+  <form name="otp" id="otp" [formGroup]="OTPForm" (ngSubmit)="checkOTP()">
     <div class="pargraphs">
       <h3>Verify your <b>Email</b></h3>
       <p>Enter the code sent to your email</p>
