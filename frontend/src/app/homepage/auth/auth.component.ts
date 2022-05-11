@@ -11,12 +11,18 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void { }
   code:number = 0;
   isLogin = true;
+  isSignup = false;
   isOTP = false;
   getData(data: any) {
-    this.isOTP = data.status;
-    this.code = data.value;
-    if(this.isOTP){
+    if(data.status){
+      this.isOTP = true;
+      this.code = data.value;
       this.isLogin = false;
+      this.isSignup = false;
+    } else {
+      this.isLogin = false;
+      this.isSignup = true;
+      this.isOTP = false;
     }
   }
 }

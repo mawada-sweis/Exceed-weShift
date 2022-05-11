@@ -35,4 +35,7 @@ export class LoginComponent implements OnInit {
         }
       });
   }
+  openReg(){
+    this.isOTP.emit({ status: false });
+  }
 }
