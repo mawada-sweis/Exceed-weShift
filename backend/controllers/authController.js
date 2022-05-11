@@ -13,15 +13,16 @@ app.use(bodyParser.json())
 
 exports.login = async (req, res) => {
     let email = req.body.email;
-
+    const code = Math.floor(1000 + Math.random() * 9000);
     let status = await check_email(email);
 
     // Account is already exist
     if (status.length) {
-        send_email(email);
+        send_email(email, code);
     } else {
-        res.render('index', { msg: 'Express' });
+        res.status(200).json({ status: false });
     }
+    res.status(200).json({ status: true, code: code });
 };
 
 exports.signup = async (req, response) => {
