@@ -2,7 +2,8 @@
   <form
     name="signup"
     id="signup"
-    
+    [formGroup]="SignupForm"
+    (ngSubmit)="signUp()"
   >
     <div class="pargraphs">
       <h3>Start with <b>weShift</b></h3>

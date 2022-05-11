@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     this.SignupForm = this.formBuilder.group({
       fullname: [''],
       email: [''],
-      city: [''],
+      city: ['']
     });
   }
 
