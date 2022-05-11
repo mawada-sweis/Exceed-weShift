@@ -11,6 +11,7 @@ import { AboutUsComponent } from './homepage/about-us/about-us.component';
 import { AuthComponent } from './homepage/auth/auth.component';
 import { LoginComponent } from './homepage/auth/login/login.component';
 import { OtpComponent } from './homepage/auth/otp/otp.component';
+import { SignupComponent } from './homepage/auth/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { OtpComponent } from './homepage/auth/otp/otp.component';
     AboutUsComponent,
     AuthComponent,
     LoginComponent,
+    SignupComponent,
     OtpComponent
   ],
   imports: [
