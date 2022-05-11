@@ -1,5 +1,5 @@
 <div class="form-container">
-  <form name="login" id="login">
+  <form name="login" id="login" [formGroup]="LoginForm" (ngSubmit)="login()">
     <div class="pargraphs">
       <h3>Welcome to <b>weShift</b></h3>
     </div>
