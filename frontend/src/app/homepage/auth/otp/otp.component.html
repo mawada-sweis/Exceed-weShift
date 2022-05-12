@@ -1,0 +1,48 @@
+<div class="form-container">
+  <form name="otp" id="otp" [formGroup]="OTPForm" (ngSubmit)="checkOTP()">
+    <div class="pargraphs">
+      <h3>Verify your <b>Email</b></h3>
+      <p>Enter the code sent to your email</p>
+    </div>
+    <input
+      type="text"
+      autocomplete="one-time-code"
+      name="code1"
+      id="code1"
+      class="input"
+      formControlName="code1"
+      required
+    />
+    <input
+      type="text"
+      autocomplete="one-time-code"
+      name="code2"
+      id="code2"
+      class="input"
+      formControlName="code2"
+      required
+    />
+    <input
+      type="text"
+      autocomplete="one-time-code"
+      name="code3"
+      id="code3"
+      class="input"
+      formControlName="code3"
+      required
+    />
+    <input
+      type="text"
+      autocomplete="one-time-code"
+      name="code4"
+      id="code4"
+      class="input"
+      formControlName="code4"
+      required
+    />
+
+    <button type="submit" class="btn btn-outline-primary" id="submit">
+      Check it
+    </button>
+  </form>
+</div>

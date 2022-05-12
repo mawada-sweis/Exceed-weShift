@@ -1,0 +1,42 @@
+<div class="form-container">
+  <form
+    name="signup"
+    id="signup"
+    [formGroup]="SignupForm"
+    (ngSubmit)="signUp()"
+  >
+    <div class="pargraphs">
+      <h3>Start with <b>weShift</b></h3>
+    </div>
+    <input
+      type="text"
+      placeholder="example@domain.com"
+      autocomplete="one-time-code"
+      name="email"
+      id="email"
+      formControlName="email"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Full Name"
+      name="fullname"
+      id="fullname"
+      formControlName="fullname"
+    />
+    <select id="city" name="city" formControlName="city">
+      <option value="Nablus">Nablus</option>
+      <option value="Ramallah">Ramallah</option>
+      <option value="Jenin">Jenin</option>
+      <option value="Tulkarm">Tulkarm</option>
+      <option value="Hebron">Hebron</option>
+      <option value="Jericho">Jericho</option>
+      <option value="Jerusalem">Jerusalem</option>
+    </select>
+    <button type="submit" class="btn btn-outline-primary" id="submit">
+      Go ahead
+    </button>
+    <span>Already have an account?</span>
+    <a id="question" (click)="openLogin()"> Login now </a>
+  </form>
+</div>

@@ -1,0 +1,51 @@
+.pargraphs {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: smaller;
+}
+
+.form-container {
+  margin-top: 10%;
+  margin-right: 15%;
+}
+
+.form-container input[type="text"] {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-container input[type="text"]:focus {
+  border: 1px solid #fd9e02;
+}
+
+.form-container .btn {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  font-size: medium;
+}
+
+#question {
+  text-align: center;
+  display: inline;
+  color: #fb8500;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: small;
+}
+
+span {
+  font-size: small;
+}
