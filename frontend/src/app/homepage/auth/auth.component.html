@@ -1,4 +1,4 @@
 
 <app-login *ngIf="isLogin" (isOTP)="getData($event)"></app-login>
-<app-signup *ngIf="isSignup"></app-signup>
+<app-signup *ngIf="isSignup" (isOTP)="getFromSignup($event)"></app-signup>
 <app-otp *ngIf="isOTP" [codeUser]="code"></app-otp>

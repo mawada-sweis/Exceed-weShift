@@ -25,4 +25,17 @@ export class AuthComponent implements OnInit {
       this.isOTP = false;
     }
   }
+  getFromSignup(data: any){
+    if(data.status){
+      this.isOTP = true;
+      this.code = data.value;
+      this.isLogin = false;
+      this.isSignup = false;
+    }
+    if(data.isLogin){
+      this.isLogin = true;
+      this.isSignup = false;
+      this.isOTP = false;
+    }
+  }
 }
