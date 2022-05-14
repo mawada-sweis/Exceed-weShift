@@ -43,6 +43,9 @@ export class OtpComponent implements OnInit {
       if(this.emailType == 'Customer') {
         this.router.navigate(['customer']);
       }
+      if(this.emailType == 'Driver') {
+        this.router.navigate(['driver']);
+      }
     } else {
       alert(
         'The code is not correct, please enter the code that recived in youy email'
