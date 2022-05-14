@@ -40,6 +40,9 @@ export class OtpComponent implements OnInit {
       if (this.emailType == 'Admin') {
         this.router.navigate(['dashboard']);
       }
+      if(this.emailType == 'Customer') {
+        this.router.navigate(['customer']);
+      }
     } else {
       alert(
         'The code is not correct, please enter the code that recived in youy email'
