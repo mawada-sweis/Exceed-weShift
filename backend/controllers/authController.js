@@ -15,6 +15,7 @@ exports.login = async (req, res) => {
     let email = req.body.email;
     const code = Math.floor(1000 + Math.random() * 9000);
     let status = await check_email(email);
+    let account_type = "";
 
     // Account is already exist
     if (status.length) {
@@ -22,7 +23,13 @@ exports.login = async (req, res) => {
     } else {
         res.status(200).json({ status: false });
     }
-    res.status(200).json({ status: true, code: code });
+    for (let index = status.length; index > -1; index--) {
+        if (status[index] != 0) {
+            account_type = status[index];
+        }
+    }
+
+    res.status(200).json({ status: true, code: code, type: account_type });
 };
 
 exports.signup = async (req, response) => {
@@ -51,15 +58,50 @@ exports.signup = async (req, response) => {
     response.status(200).json({ status: true, code: code });
 }
 
-const check_email = async email => new Promise((resolve, reject) => {
-    con.query(`SELECT AccountEmail FROM Account WHERE AccountEmail = ?`,
-        [email],
-        (err, result) => {
-            if (err) { reject(err); }
-            resolve(result);
-        }
-    )
-});
+const check_email = async email => {
+    const Admin = new Promise((resolve, reject) => {
+        con.query(`SELECT Admin_Email FROM admin WHERE Admin_Email = ?`,
+            [email],
+            (err, result) => {
+                if (err) { reject(err); }
+                if (result.length) {
+                    resolve('Admin');
+                }
+                resolve(0);
+            }
+        )
+    });
+
+    const Driver = new Promise((resolve, reject) => {
+        con.query(`SELECT Driver_Email FROM Driver WHERE Driver_Email = ?`,
+            [email],
+            (err, result) => {
+                if (err) { reject(err); }
+                if (result.length) {
+                    resolve('Driver');
+                }
+
+                resolve(0);
+            }
+        )
+    });
+
+    const Customer = new Promise((resolve, reject) => {
+        con.query(`SELECT Customer_Email FROM Customer WHERE Customer_Email = ?`,
+            [email],
+            (err, result) => {
+                if (err) { reject(err); }
+                if (result.length) {
+                    resolve('Customer');
+                }
+                resolve(0);
+            }
+        )
+    });
+
+    const p = Promise.all([Admin, Driver, Customer]);
+    return p;
+};
 
 access_level = (req, res) => {
     res.send('NOT IMPLEMENTED: access_level');
