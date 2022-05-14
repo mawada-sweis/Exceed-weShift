@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-otp',
   templateUrl: './otp.component.html',
-  styleUrls: ['./otp.component.css']
+  styleUrls: ['./otp.component.css'],
 })
 export class OtpComponent implements OnInit {
   constructor(
@@ -15,7 +15,8 @@ export class OtpComponent implements OnInit {
     private router: Router
   ) {}
 
-  @Input() codeUser : number = 0;
+  @Input() codeUser: number = 0;
+  @Input() emailType: string = '';
   public OTPForm!: FormGroup;
 
   ngOnInit(): void {
@@ -25,6 +26,8 @@ export class OtpComponent implements OnInit {
       code3: [''],
       code4: [''],
     });
+    console.log('Code: ', this.codeUser);
+    console.log('Email Type: ', this.emailType);
   }
 
   checkOTP() {
@@ -34,7 +37,9 @@ export class OtpComponent implements OnInit {
       this.OTPForm.value.code3 +
       this.OTPForm.value.code4;
     if (code == this.codeUser) {
-      this.router.navigate(['dashboard']);
+      if (this.emailType == 'Admin') {
+        this.router.navigate(['dashboard']);
+      }
     } else {
       alert(
         'The code is not correct, please enter the code that recived in youy email'
