@@ -12,4 +12,5 @@ router.post('/login', auth_controller.login);
 // POST request for Sign up.
 router.post('/signup', auth_controller.signup);
 
+router.post('/driver/login', auth_controller.driver_login);
 module.exports = router;
