@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -9,11 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./otp.component.css'],
 })
 export class OtpComponent implements OnInit {
-  constructor(
-    private route: ActivatedRoute,
-    private formBuilder: FormBuilder,
-    private router: Router
-  ) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   @Input() codeUser: number = 0;
   @Input() emailType: string = '';
@@ -40,10 +35,10 @@ export class OtpComponent implements OnInit {
       if (this.emailType == 'Admin') {
         this.router.navigate(['dashboard']);
       }
-      if(this.emailType == 'Customer') {
+      if (this.emailType == 'Customer') {
         this.router.navigate(['customer']);
       }
-      if(this.emailType == 'Driver') {
+      if (this.emailType == 'Driver') {
         this.router.navigate(['driver']);
       }
     } else {

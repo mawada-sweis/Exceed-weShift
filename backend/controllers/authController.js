@@ -16,55 +16,52 @@ exports.login = async (req, res) => {
     const code = Math.floor(1000 + Math.random() * 9000);
     let status = await check_email(email);
     let account_type = "";
+    console.log(status);
 
-    // Account is already exist
-    if (status.length) {
-        send_email(email, code);
-    } else {
-        res.status(200).json({ status: false });
-    }
-    for (let index = status.length; index > -1; index--) {
+    for (let index = status.length - 1; index > -1; index--) {
+        // Account is already exist
         if (status[index] != 0) {
             account_type = status[index];
+            send_email(email, code);
+            res.status(200).json({ status: true, code: code, type: account_type });
         }
     }
-
-    res.status(200).json({ status: true, code: code, type: account_type });
+    res.status(200).json({ status: false });
 };
 
 exports.signup = async (req, response) => {
-    let email = req.body.email;
-    let name = req.body.fullname;
-    let city = req.body.city;
+    let email = req.body[0].email;
+    let name = req.body[0].fullname;
+    let city = req.body[0].city;
+    let type = req.body[1].type;
     const code = Math.floor(1000 + Math.random() * 9000);
 
     let status = await check_email(email);
 
     // Account is already exist
-    if (status.length) {
-        response.status(200).json({ status: false });
+    for (let index = status.length - 1; index > -1; index--) {
+        if (status[index] != 0) {
+            response.status(200).json({ status: false });
+        }
     }
-    else {
-        let saveEmailSql = 'INSERT INTO Account (AccountEmail, City, Name, situation) VALUES (?, ?, ?, ?)';
-        con.query(saveEmailSql, [email, city, name, 'Active'], (err, res) => {
+    if (type == 'Customer') {
+        let customer = 'INSERT INTO Customer (Customer_Email_PK, Customer_City, Customer_Name) VALUES (?, ?, ?)';
+        con.query(customer, [email, city, name], (err, res) => {
             if (err) throw err;
-
-            // Insert operation Not Success
-            if (res.length == undefined) {
-                send_email(email, code);
-            }
+            send_email(email, code);
         });
     }
-    response.status(200).json({ status: true, code: code });
+
+    response.status(200).json({ status: true, code: code, type: type });
 }
 
 const check_email = async email => {
     const Admin = new Promise((resolve, reject) => {
-        con.query(`SELECT Admin_Email FROM admin WHERE Admin_Email = ?`,
+        con.query(`SELECT Admin_Email FROM Admin WHERE Admin_Email = ?`,
             [email],
             (err, result) => {
                 if (err) { reject(err); }
-                if (result.length) {
+                if (result.length > 0) {
                     resolve('Admin');
                 }
                 resolve(0);
@@ -72,26 +69,12 @@ const check_email = async email => {
         )
     });
 
-    const Driver = new Promise((resolve, reject) => {
-        con.query(`SELECT Driver_Email FROM Driver WHERE Driver_Email = ?`,
-            [email],
-            (err, result) => {
-                if (err) { reject(err); }
-                if (result.length) {
-                    resolve('Driver');
-                }
-
-                resolve(0);
-            }
-        )
-    });
-
     const Customer = new Promise((resolve, reject) => {
-        con.query(`SELECT Customer_Email FROM Customer WHERE Customer_Email = ?`,
+        con.query(`SELECT Customer_Email_PK FROM Customer WHERE Customer_Email_PK = ?`,
             [email],
             (err, result) => {
                 if (err) { reject(err); }
-                if (result.length) {
+                if (result.length > 0) {
                     resolve('Customer');
                 }
                 resolve(0);
@@ -99,7 +82,7 @@ const check_email = async email => {
         )
     });
 
-    const p = Promise.all([Admin, Driver, Customer]);
+    const p = Promise.all([Admin, Customer]);
     return p;
 };
 
@@ -107,7 +90,7 @@ access_level = (req, res) => {
     res.send('NOT IMPLEMENTED: access_level');
 };
 
-send_email = async (email,  code) => {
+send_email = async (email, code) => {
 
     // create reusable transporter object using the Gmail transport
     let transporter = nodemailer.createTransport({
@@ -115,7 +98,7 @@ send_email = async (email,  code) => {
         port: 587,
         secure: false,
         auth: {
-            user: "exceed2022web@gmail.com", 
+            user: "exceed2022web@gmail.com",
             pass: "Exceed2022@",
         },
     });
@@ -127,7 +110,7 @@ send_email = async (email,  code) => {
         from: '"Exceed- WeShift" <exceed2022web@gmail.com>', // sender address
         to: email, // receiver
         subject: "OTP Code", // Subject line
-        text: "Here is your OTD Code: "  + code // plain text body
+        text: "Here is your OTD Code: " + code // plain text body
     }).then(info => {
         //console.log("Some code to display otp page");
     }).catch(console.error);
