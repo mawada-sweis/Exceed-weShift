@@ -6,7 +6,7 @@ var mysql = require('mysql2');
 //Set up default mongoose connection
 var sqlDB = {
     host: "remotemysql.com",
-    port:3306,
+    port: 3306,
     user: "cex2HopF91",
     password: "ags4ktNiHq",
     database: "cex2HopF91"

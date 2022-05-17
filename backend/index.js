@@ -29,10 +29,13 @@ console.log(`Visit localhost:${app.get('port')}`);
 var indexRouter = require('./routes/index');
 
 // Import Authentication routes
-var authRouter = require('./routes/authRouter');  
+var authRouter = require('./routes/authRouter');
 
 // Using the index routes
 app.use('/', indexRouter);
 
 // Using the Authentication routes
 app.use('/authentication', authRouter);
+
+var dashboardRouter = require('./routes/dashboard');
+app.use('/dashboard', dashboardRouter);
