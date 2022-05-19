@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       )
       .subscribe((res: any) => {
         if (res.status) {
-          this.isOTP.emit({ status: true, value: res.code, type: res.type });
+          this.isOTP.emit({ status: true, value: res.code });
         } else {
           alert('Account is not exist!');
         }

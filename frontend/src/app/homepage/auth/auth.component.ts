@@ -10,7 +10,6 @@ export class AuthComponent implements OnInit {
   constructor() { }
   ngOnInit(): void { }
   code:number = 0;
-  type:string = '';
   isLogin = true;
   isSignup = false;
   isOTP = false;
@@ -18,7 +17,6 @@ export class AuthComponent implements OnInit {
     if(data.status){
       this.isOTP = true;
       this.code = data.value;
-      this.type = data.type;
       this.isLogin = false;
       this.isSignup = false;
     } else {
@@ -31,7 +29,6 @@ export class AuthComponent implements OnInit {
     if(data.status){
       this.isOTP = true;
       this.code = data.value;
-      this.type = data.type;
       this.isLogin = false;
       this.isSignup = false;
     }

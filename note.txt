@@ -1,0 +1,27 @@
+controllers files:
+    driverController.js
+    carsController.js
+    customerController.js
+    shiftsController.js
+    requestController.js
+    authController.js
+
+URLs: 
+    [index.js] 
+        / before login
+    
+    [Routes from ./routes/index.js to ./controllers] 
+        authentication/<id>/login 
+        authentication/signup 
+        authentication/<id>/sendEmail 
+        authentication/<code>/otp
+
+        dashboard/ - the homepage index page
+        dashboard/<objects>/ - objects are drivers, cars, customers, shifts and request
+        dashboard/<objects>/<id> - The detail page for a specific drivers, cars, customers, shifts and request
+        dashboard/<objects>/create - The form to create a new drivers, cars, customers and shifts
+        dashboard/<objects>/<id>/update - The form to update a specific drivers, cars, customers and shifts
+        dashboard/<objects>/<id>/delete - The form to delete a specific drivers, cars and customers
+
+Routes files -For Now-:
+    index.js
