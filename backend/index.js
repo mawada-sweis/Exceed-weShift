@@ -30,9 +30,20 @@ var indexRouter = require('./routes/index');
 
 // Import Authentication routes
 var authRouter = require('./routes/authRouter');  
+// Import car routes
+var CarRouter = require('./routes/CarRouter'); 
 
+// Import shift routes
+var ShiftsRouter = require('./routes/ShiftsRouter'); 
 // Using the index routes
 app.use('/', indexRouter);
 
 // Using the Authentication routes
 app.use('/authentication', authRouter);
+
+// Using the car routes
+app.use('/Car', CarRouter);
+
+app.use('/Shifts',ShiftsRouter);
+
+//

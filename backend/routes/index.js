@@ -5,5 +5,7 @@ var router = express.Router();
 router.post('/authentication', function(req, res) {
     res.redirect('./authRouter');
   });
-
+ 
+  
   module.exports = router;
+

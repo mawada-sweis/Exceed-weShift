@@ -1,5 +1,5 @@
 // Database connection
-
+/*
 // Import the mysql module
 var mysql = require('mysql2');
 
@@ -23,3 +23,4 @@ con.connect(function(err) {
 
 // Export the connection
 module.exports = con;
+*/
