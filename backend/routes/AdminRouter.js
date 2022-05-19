@@ -14,7 +14,7 @@ router.get('/Admin', Admin_controller.getAllAdmin)
 router.get('/Admin/:Admin_Email' , Admin_controller.getAdminWhereEmail)
 
 // get Admin where Admin City 
-router.get('/Admin/:Admin_Phone' , Admin_controller.getAdminWhereCity)
+/*router.get('/Admin/:Admin_Phone' , Admin_controller.getAdminWhereCity)*/
 
 // post (add) new Admin  
 router.post('/Admin', Admin_controller.addNewAdmin)
