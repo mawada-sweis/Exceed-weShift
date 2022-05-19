@@ -27,13 +27,13 @@ exports.getAdminWhereEmail= async(request,response)=>{
  }
 //////////////note
  // get Admin City 
-exports.getAdminWhereCity= async(request,response)=>{
+/*exports.getAdminWhereCity= async(request,response)=>{
     var AdminCity = request.params.Admin_Phone
     let sql="SELECT * FROM Admin WHERE Admin_Phone=?";
     let result1=await db.connection.execute(sql,[AdminCity]);
  
    response.status(200).json(result1);
- }
+ }*/
 
 // post (add) new Admin  
 exports.addNewAdmin = async (request, response) => {
