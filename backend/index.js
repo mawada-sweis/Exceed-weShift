@@ -34,6 +34,9 @@ var authRouter = require('./routes/authRouter');
 // Import Customer routes
 var CustomerRouter = require('./routes/CustomerRouter'); 
 
+// Import Feedback routes
+var FeedbackRouter = require('./routes/FeedbackRouter'); 
+
 // Using the index routes
 app.use('/', indexRouter);
 
@@ -42,3 +45,6 @@ app.use('/authentication', authRouter);
 
 // Using the Customer routes
 app.use('/Customer', CustomerRouter);
+
+// Using the Feedback routes
+app.use('/Feedback', FeedbackRouter);
