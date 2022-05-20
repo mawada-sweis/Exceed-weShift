@@ -15,6 +15,7 @@ import { SignupComponent } from './homepage/auth/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthDriverComponent } from './homepage/auth/auth-driver/auth-driver.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SignupComponent,
     OtpComponent,
     DashboardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AuthDriverComponent
   ],
   imports: [
     BrowserModule,
