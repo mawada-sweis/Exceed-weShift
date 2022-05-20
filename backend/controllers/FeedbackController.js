@@ -18,15 +18,6 @@ exports.getAllFeedback = async (request, response) => {
     response.status(200).json(result)   
 }
 
-// get All user Feedbacks
-exports.getAllUserFeedback = async (request, response) => {
-    var CustmorID = request.params.Custmor_ID
-    let sql="SELECT * FROM feedback WHERE Custmor_ID=?" 
-    let result1=await db.connection.execute(sql,[CustmorID]);
-    response.status(200).json(result)   
-}
-
-
 // get Feedback by Id 
 exports.getFeedbackById= async(request,response)=>{
     var FeedbackId = request.params.Feedback_ID

@@ -11,12 +11,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json())
 
-/*
-exports.getAllCustomer = async (request, response) => {
-    let [result, rows] = await db.query("SELECT * FROM Customer")
-    response.status(200).json(result)
-}*/
-
 // get All Customer
 exports.getAllCustomer = async (request, response) => {
     let [result, rows] = await db.connection.execute("SELECT * FROM Customer") 

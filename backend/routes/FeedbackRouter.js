@@ -8,9 +8,6 @@ var Feedback_controller = require('../controllers/FeedbackController');
 // get all Feedback
 router.get('/Feedback', Feedback_controller.getAllFeedback)
 
-// get all User Feedback
-router.get('/Feedback/:Custmor_ID', Feedback_controller.getAllUserFeedback)
-
 // get Feedback by id
 router.get('/Feedback/:Feedback_ID' , Feedback_controller.getFeedbackById)
 
