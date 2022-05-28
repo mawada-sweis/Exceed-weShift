@@ -14,6 +14,9 @@ import { OtpComponent } from './homepage/auth/otp/otp.component';
 import { SignupComponent } from './homepage/auth/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from './dashboard/navbar/navbar/navbar.component';
+import { AddCustomerComponent } from './add-customer/add-customer/add-customer.component';
+import { CustomerListComponent } from './customer-list/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     SignupComponent,
     OtpComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent,
+    AddCustomerComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,

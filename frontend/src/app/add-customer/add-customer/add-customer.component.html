@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-body" style="background-color: rgb(236, 235, 235);">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style='font-size:48px'>Full Name<i class='far fa-user-circle'></i></h4>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form name="addCustomer" id="addCustomer" [formGroup]="AddCustomerForm" novalidate style="background-color: rgb(236, 235, 235);">
+                          <div class="singel-form form-group row">
+                            <label for="name" class="col-4 col-form-label">Name</label> 
+                            <div class="col-8">
+                              <input formControlName="Customer_Name" name="name" placeholder="Name" class="form-control here" type="text" required="required">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="phone" class="col-4 col-form-label" >Phone Number</label> 
+                            <div class="col-8">
+                              <input formControlName="Customer_Phone" name="phone" placeholder="+972" class="form-control here" type="tel"  required="required" >
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="email" class="col-4 col-form-label">Email </label> 
+                            <div class="col-8">
+                              <input formControlName="Customer_Email_PK" name="email" placeholder="example@gmail.com" class="form-control here" type="email" required="required">
+                            </div>
+                          </div>
+                          <br><br><br>
+                          <div class="form-group row">
+                            <label for="city" class="col-4 col-form-label">City</label> 
+                            <div class="col-8">
+                              <input formControlName="Customer_City" name="city" placeholder="City Name" class="form-control here"  type="text" required="required" >
+                            </div>
+                        </div>
+                          
+                          <div class="form-group row">
+                            <label for="active" class="col-4 col-form-label">Active</label> 
+                            <div class="col-8">
+                              <input formControlName="Customer_Active" name="active" placeholder="-------" class="form-control here" type="text" required="required">
+                            </div>
+                          </div>
+                          
+                        <br><br><br>
+                         
+                          <div class="form-group row">
+                            <div class="offset-4 col-8">
+                              <button (click)="onSave()" type="submit" class="button-A">Add Customer</button>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
