@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BoardHomeComponent } from './dashboard/board-home/board-home.component';
+import { CarComponent } from './dashboard/car/car.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path:'home',
         component:BoardHomeComponent
+      },
+      {
+        path:'car',
+        component:CarComponent
       }
     ]
   },

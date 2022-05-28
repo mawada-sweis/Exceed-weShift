@@ -17,7 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthDriverComponent } from './homepage/auth/auth-driver/auth-driver.component';
 import { BoardHomeComponent } from './dashboard/board-home/board-home.component';
-
+import { CarComponent } from './dashboard/car/car.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import { BoardHomeComponent } from './dashboard/board-home/board-home.component'
     NotFoundComponent,
     AuthDriverComponent,
     BoardHomeComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,
