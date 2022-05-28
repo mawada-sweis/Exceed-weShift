@@ -11,7 +11,7 @@ router.post('/salary', function(req, res) {
   });
 
 router.post('/request', function(req, res) {
-    res.redirect('./requestRouter');
+    res.redirect('./requestByAdminRouter');
   });
 
 
