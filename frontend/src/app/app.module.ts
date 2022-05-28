@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthDriverComponent } from './homepage/auth/auth-driver/auth-driver.component';
+import { BoardHomeComponent } from './dashboard/board-home/board-home.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { AuthDriverComponent } from './homepage/auth/auth-driver/auth-driver.com
     OtpComponent,
     DashboardComponent,
     NotFoundComponent,
-    AuthDriverComponent
+    AuthDriverComponent,
+    BoardHomeComponent,
   ],
   imports: [
     BrowserModule,

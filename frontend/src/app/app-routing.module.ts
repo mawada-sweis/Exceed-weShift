@@ -4,11 +4,22 @@ import { AuthDriverComponent } from './homepage/auth/auth-driver/auth-driver.com
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BoardHomeComponent } from './dashboard/board-home/board-home.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
   {path:"home", component:HomepageComponent, children:[{path:"driver", component:AuthDriverComponent}]},
-  {path:"dashboard", component:DashboardComponent},
+  {path:"dashboard", redirectTo: 'dashboard'},
+  {
+    path:'dashboard',
+    component:DashboardComponent,
+    children: [
+      {
+        path:'home',
+        component:BoardHomeComponent
+      }
+    ]
+  },
   {path:"**", component:NotFoundComponent}
 ];
 
