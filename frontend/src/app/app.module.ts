@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CarComponent } from './car/car.component';
+import { CarListComponent } from './car-list/car-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CarComponent } from './car/car.component';
     OtpComponent,
     DashboardComponent,
     NotFoundComponent,
-    CarComponent
+    CarComponent,
+    CarListComponent
   ],
   imports: [
     BrowserModule,
