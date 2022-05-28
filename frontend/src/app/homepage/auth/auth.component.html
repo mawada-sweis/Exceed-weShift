@@ -2,3 +2,4 @@
 <app-login *ngIf="isLogin" (isOTP)="getData($event)"></app-login>
 <app-signup *ngIf="isSignup" (isOTP)="getFromSignup($event)"></app-signup>
 <app-otp *ngIf="isOTP" [codeUser]="code" [emailType]="type"></app-otp>
+<app-auth-driver *ngIf="isDriver" (isOTP)="getFromDriver($event)"></app-auth-driver>

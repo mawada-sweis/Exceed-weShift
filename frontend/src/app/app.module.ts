@@ -15,6 +15,15 @@ import { SignupComponent } from './homepage/auth/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthDriverComponent } from './homepage/auth/auth-driver/auth-driver.component';
+import { BoardHomeComponent } from './dashboard/board-home/board-home.component';
+import { CarComponent } from './dashboard/car/car.component';
+import { CustomerComponent } from './dashboard/customer/customer.component';
+import { DriverComponent } from './dashboard/driver/driver.component';
+import { FeedbackComponent } from './dashboard/feedback/feedback.component';
+import { RequestComponent } from './dashboard/request/request.component';
+import { SalaryComponent } from './dashboard/salary/salary.component';
+import { ShiftComponent } from './dashboard/shift/shift.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +37,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SignupComponent,
     OtpComponent,
     DashboardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AuthDriverComponent,
+    BoardHomeComponent,
+    CarComponent,
+    CustomerComponent,
+    DriverComponent,
+    FeedbackComponent,
+    RequestComponent,
+    SalaryComponent,
+    ShiftComponent
   ],
   imports: [
     BrowserModule,
