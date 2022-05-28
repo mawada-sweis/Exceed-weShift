@@ -11,6 +11,7 @@ import { DriverComponent } from './dashboard/driver/driver.component';
 import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
+import { ShiftComponent } from './dashboard/shift/shift.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path:'salary',
         component:SalaryComponent
+      },
+      {
+        path:'shift',
+        component:ShiftComponent
       }
     ]
   },

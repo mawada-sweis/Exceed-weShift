@@ -23,6 +23,7 @@ import { DriverComponent } from './dashboard/driver/driver.component';
 import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
+import { ShiftComponent } from './dashboard/shift/shift.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { SalaryComponent } from './dashboard/salary/salary.component';
     DriverComponent,
     FeedbackComponent,
     RequestComponent,
-    SalaryComponent
+    SalaryComponent,
+    ShiftComponent
   ],
   imports: [
     BrowserModule,
