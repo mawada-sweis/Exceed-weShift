@@ -31,8 +31,14 @@ var indexRouter = require('./routes/index');
 // Import Authentication routes
 var authRouter = require('./routes/authRouter');  
 
+// Import salary routes
+var salaryRouter = require('./routes/salaryRouter');  
+
 // Using the index routes
 app.use('/', indexRouter);
 
 // Using the Authentication routes
 app.use('/authentication', authRouter);
+
+// Using the salary routes
+app.use('/salary', salaryRouter);
