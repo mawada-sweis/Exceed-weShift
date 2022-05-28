@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+
   public LoginForm!: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
@@ -38,4 +39,5 @@ export class LoginComponent implements OnInit {
   openReg(){
     this.isOTP.emit({ status: false });
   }
+  
 }
