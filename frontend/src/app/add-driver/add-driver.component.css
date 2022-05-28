@@ -9,9 +9,13 @@
           
     
     }
-    nav .a:hover {
-        background-color: rgb(236, 235, 235);
+    .container{
+        height: 200px;
+        width: 35%;
+        margin-top:40px ;
+        
     }
-    nav .a:active{
+    
+    .button-A:hover {
         background-color: rgb(236, 235, 235);
     }
