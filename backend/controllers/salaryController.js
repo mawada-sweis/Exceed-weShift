@@ -2,8 +2,6 @@ const con = require('../models/database');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const Promise = require('promise');
-const nodemailer = require('nodemailer');
 
 // Body Parser
 app.use(bodyParser.urlencoded({

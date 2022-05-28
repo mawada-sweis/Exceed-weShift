@@ -10,5 +10,9 @@ router.post('/salary', function(req, res) {
     res.redirect('./salaryRouter');
   });
 
+router.post('/request', function(req, res) {
+    res.redirect('./requestRouter');
+  });
+
 
   module.exports = router;
