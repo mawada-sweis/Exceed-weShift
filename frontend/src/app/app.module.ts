@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,ArrayOfCar } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -15,8 +15,7 @@ import { SignupComponent } from './homepage/auth/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { CarComponent } from './car/car.component';
-import { CarListComponent } from './car-list/car-list.component';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +30,8 @@ import { CarListComponent } from './car-list/car-list.component';
     OtpComponent,
     DashboardComponent,
     NotFoundComponent,
-    CarComponent,
-    CarListComponent
+    ArrayOfCar,
+   
   ],
   imports: [
     BrowserModule,

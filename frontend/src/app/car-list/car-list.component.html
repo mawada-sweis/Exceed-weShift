@@ -1,5 +1,5 @@
-<p>car-list works!</p>
-<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style=" height: 230px;   background-image: url(https://img.freepik.com/free-vector/taxi-driver-man-driving-yellow-car-isolated-background-vector-illustration-cartoon-style_165429-1131.jpg)" >
+
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style=" height: 230px;   background-image: url(https://media.istockphoto.com/vectors/set-of-diverse-taxi-cars-and-drivers-funny-taxi-driver-posing-near-vector-id1136287628)" >
     <br><br>
     <div class="container">
         <div class="row">
@@ -11,16 +11,16 @@
     <br><br><br>
   </section>
 <ul class="horizontal-list">
-    <li >Car_ID_PK</li>
-    <li>Car_Model</li>
-    <li>Car_Number</li>
+    <li >Car ID</li>
+    <li>Model</li>
+    <li>Number</li>
     <li>Expenses</li>
-    <li>Insurance_License</li>
-    <li>Car_Fuel_Type</li>
-    <li>Car_Fuel_Price</li>
-    <li>Car_Type</li>
-    <li>Car_Year_Release</li>
-    <li>Car_Passenger_Number</li>
+    <li>Insurance License</li>
+    <li>Fuel Type</li>
+    <li>Fuel Price</li>
+    <li>Car Type</li>
+    <li>Year Release</li>
+    <li>Passenger Number</li>
  
   </ul>
 <div class="car-list">
@@ -38,11 +38,12 @@
         <td class="Car_Fuel_Price">{{Car.Car_Fuel_Price}}</td>
         <td class="Car_Type">{{Car.Car_Type}}</td>
         <td class="Car_Year_Release">{{Car.Car_Year_Release}}</td>
+        <td class="Car_Passenger_Number">{{Car.Car_Passenger_Number}}</td>
     </tr>
 </tbody>
     </table>
         <br>
-        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/Edit-Car',Car.Car_ID_PK]" routerLinkActive="active" >Edit</button>
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/edit-car',Car.Car_ID_PK]" routerLinkActive="active" >Edit</button>
         <button type="button" class="btn btn-light" id="delete" (click)="deleteCar(Car.Car_ID_PK)">delete</button>
       </div>
   </div>

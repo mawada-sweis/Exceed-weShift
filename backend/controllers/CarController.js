@@ -66,8 +66,8 @@ exports.deleteCar = async(request,response)=>{
 
  //Update Car "Car_ID_PK" where carId
 exports.updateCarModel = async(request,response)=>{
-    let sql="UPDATE Car SET Car_Model=? WHERE Car_ID_PK=?"
-    let result1=await db.connection.execute(sql,[request.body.Car_Model,request.body.Car_ID_PK]);
+    let sql="UPDATE Car SET Car_Model=? ,Car_Number=?,Expenses=?,Insurance_License=?,Car_Fuel_Type=?,Car_Fuel_Price=? WHERE Car_ID_PK=?"
+    let result1=await db.connection.execute(sql,[request.body.Car_Model,request.body.Car_Number,request.body.Expenses,request.body.Insurance_License,request.body.Car_Fuel_Type,request.body.Car_Fuel_Price,request.body.Car_ID_PK]);
     response.status(200).json("row edited");
 
 }
