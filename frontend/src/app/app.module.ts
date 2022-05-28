@@ -15,6 +15,7 @@ import { SignupComponent } from './homepage/auth/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CarComponent } from './car/car.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SignupComponent,
     OtpComponent,
     DashboardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,
