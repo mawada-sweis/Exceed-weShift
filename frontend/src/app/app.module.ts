@@ -19,6 +19,7 @@ import { AuthDriverComponent } from './homepage/auth/auth-driver/auth-driver.com
 import { BoardHomeComponent } from './dashboard/board-home/board-home.component';
 import { CarComponent } from './dashboard/car/car.component';
 import { CustomerComponent } from './dashboard/customer/customer.component';
+import { DriverComponent } from './dashboard/driver/driver.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { CustomerComponent } from './dashboard/customer/customer.component';
     AuthDriverComponent,
     BoardHomeComponent,
     CarComponent,
-    CustomerComponent
+    CustomerComponent,
+    DriverComponent
   ],
   imports: [
     BrowserModule,
