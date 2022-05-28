@@ -22,6 +22,7 @@ import { CustomerComponent } from './dashboard/customer/customer.component';
 import { DriverComponent } from './dashboard/driver/driver.component';
 import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
+import { SalaryComponent } from './dashboard/salary/salary.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { RequestComponent } from './dashboard/request/request.component';
     CustomerComponent,
     DriverComponent,
     FeedbackComponent,
-    RequestComponent
+    RequestComponent,
+    SalaryComponent
   ],
   imports: [
     BrowserModule,

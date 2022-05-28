@@ -10,6 +10,7 @@ import { CustomerComponent } from './dashboard/customer/customer.component';
 import { DriverComponent } from './dashboard/driver/driver.component';
 import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
+import { SalaryComponent } from './dashboard/salary/salary.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path:'request',
         component:RequestComponent
+      },
+      {
+        path:'salary',
+        component:SalaryComponent
       }
     ]
   },
