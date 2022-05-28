@@ -21,6 +21,8 @@ import { CarComponent } from './dashboard/car/car.component';
 import { CustomerComponent } from './dashboard/customer/customer.component';
 import { DriverComponent } from './dashboard/driver/driver.component';
 import { FeedbackComponent } from './dashboard/feedback/feedback.component';
+import { RequestComponent } from './dashboard/request/request.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,8 @@ import { FeedbackComponent } from './dashboard/feedback/feedback.component';
     CarComponent,
     CustomerComponent,
     DriverComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    RequestComponent
   ],
   imports: [
     BrowserModule,
