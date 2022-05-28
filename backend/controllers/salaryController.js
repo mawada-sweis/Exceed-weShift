@@ -26,29 +26,36 @@ exports.addSalary = async (req, res) => {
 };
 
 exports.updateSalary = async (req, res) => {
-    data = req.body;
 
-    let salary = "UPDATE `Salary` SET `Request_Number`=?,`Next_Donation`= ?,`Frequency`= ? ,`Next_Salary`= ? \
+    data = req.body;
+    let salary = "UPDATE `Salary` SET `Request_Number`=?,`Next_Donation`= ?,`Frequency`= ? ,`Next_Salary`= ?\
                   WHERE `Salary_ID_FK`= ?";
     con.query(salary, [data.Request_Number, data.Next_Donation, data.Frequency, data.Next_Salary, data.Salary_ID_FK], 
         (err, res) => {
         if (err) throw err;
-    }
-    );
+    });
 
     res.status(200).json("salary updated");
 };
 
 exports.getSalary = async (req, res) => {
-    data = req.body;
 
     let salary = "SELECT * FROM `Salary`";
-    result = con.query(salary, 
+    con.query(salary, 
+        (err, respon) => {
+            if (err) throw err;
+            res.status(200).json(respon);
+    });
+};
+
+exports.deleteSalary = async (req, res) => {
+
+    let salary = "DELETE FROM `Salary` WHERE `Salary_ID_FK`= ?";
+    con.query(salary, [req.params.id], 
         (err, res) => {
         if (err) throw err;
-    }
-    );
+    });
 
-    res.status(200).json(result[1]);
+    res.status(200).json("salary has deleted");
 };
 
