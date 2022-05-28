@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule,ArrayOfCar } from './app-routing.module';
+import { AppRoutingModule,ArrayOfCar,ArrayOfShift } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -31,6 +31,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     DashboardComponent,
     NotFoundComponent,
     ArrayOfCar,
+    ArrayOfShift
    
   ],
   imports: [
