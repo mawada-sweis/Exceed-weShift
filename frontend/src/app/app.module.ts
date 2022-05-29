@@ -28,6 +28,7 @@ import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.compone
 import { ShiftListComponent } from './dashboard/shift/shift-list/shift-list.component';
 import { EditShiftComponent } from './dashboard/shift/edit-shift/edit-shift.component';
 import { CarListComponent } from './dashboard/car/car-list/car-list.component';
+import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { CarListComponent } from './dashboard/car/car-list/car-list.component';
     AddShiftComponent,
     ShiftListComponent,
     EditShiftComponent,
-    CarListComponent
+    CarListComponent,
+    AddCarComponent
   ],
   imports: [
     BrowserModule,
