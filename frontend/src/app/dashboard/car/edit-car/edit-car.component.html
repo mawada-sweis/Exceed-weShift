@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-body" style="background-color: rgb(236, 235, 235);">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style='font-size:48px'>Full Name<i class='far fa-user-circle'></i></h4>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form name="editCar" id="editCar" [formGroup]="EditCarComponent" novalidate
+                            style="background-color: rgb(236, 235, 235);">
+                            <div class="form-group row">
+                                <label for="Car_Model" class="col-4 col-form-label">Car_Model</label>
+                                <div class="col-8">
+                                    <input formControlName="Car_Model" name="" placeholder="Car_Model"
+                                        class="form-control here" type="text" required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Car_Number" class="col-4 col-form-label">Car Number </label>
+                                <div class="col-8">
+                                    <input formControlName="Car_Number" name="" placeholder="Car_Number"
+                                        class="form-control here" type="text" required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Expenses" class="col-4 col-form-label">Expenses </label>
+                                <div class="col-8">
+                                    <input formControlName="Expenses" name="" placeholder="Expenses"
+                                        class="form-control here" type="text" required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Insurance_License" class="col-4 col-form-label">Insurance_License </label>
+                                <div class="col-8">
+                                    <input formControlName="Insurance_License" name="Insurance_License"
+                                        placeholder="Insurance_License" class="form-control here" type="text"
+                                        required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Car_Fuel_Type" class="col-4 col-form-label"> Car_Fuel_Type </label>
+                                <div class="col-8">
+                                    <input formControlName="Car_Fuel_Type" name="Car_Fuel_Type"
+                                        placeholder="Car_Fuel_Type" class="form-control here" type="text" required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Car_Fuel_Price" class="col-4 col-form-label"> Car_Fuel_Price </label>
+                                <div class="col-8">
+                                    <input formControlName="Car_Fuel_Price" name="Car_Fuel_Price"
+                                        placeholder="Car_Fuel_Price" class="form-control here" type="text" required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-4 col-8">
+                                    <button routerLink="/dashboard/car/car-list" routerLinkActive="active" (click)="editCar()"
+                                        type="submit" class="button-E">
+                                        <span></span> Edit
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

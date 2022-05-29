@@ -40,6 +40,11 @@ var CustomerRouter = require('./routes/CustomerRouter');
 // Import feedback routes
 var FeedbackRouter = require('./routes/FeedbackRouter');  
 
+// Import car routes
+var CarRouter = require('./routes/CarRouter'); 
+
+// Import shift routes
+var ShiftsRouter = require('./routes/ShiftsRouter');
 
 // Using the index routes
 app.use('/', indexRouter);
@@ -50,8 +55,14 @@ app.use('/authentication', authRouter);
 // Using the salary routes
 app.use('/salary', salaryRouter);
 
+
 // Using the customer routes
 app.use('/Customer', CustomerRouter);
 
 // Using the feedback routes
 app.use('/Feedback', FeedbackRouter);
+// Using the car routes
+app.use('/car', CarRouter);
+
+// Using the shifts routes
+app.use('/shift',ShiftsRouter);

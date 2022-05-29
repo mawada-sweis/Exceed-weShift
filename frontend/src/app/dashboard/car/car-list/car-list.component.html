@@ -1,0 +1,53 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"
+    style=" height: 230px;   background-image: url(https://media.istockphoto.com/vectors/set-of-diverse-taxi-cars-and-drivers-funny-taxi-driver-posing-near-vector-id1136287628)">
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- page banner cont -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <br><br><br>
+</section>
+<ul class="horizontal-list">
+    <li>Car ID</li>
+    <li>Model</li>
+    <li>Number</li>
+    <li>Expenses</li>
+    <li>Insurance License</li>
+    <li>Fuel Type</li>
+    <li>Fuel Price</li>
+    <li>Car Type</li>
+    <li>Year Release</li>
+    <li>Passenger Number</li>
+
+</ul>
+<div class="car-list">
+    <div class="list-item" *ngFor="let Car of CarList">
+        <table class="users">
+
+            <tbody>
+                <tr>
+                    <td class="Car_ID_PK">{{Car.Car_ID_PK}}</td>
+                    <td class="Car_Model">{{Car.Car_Model}}</td>
+                    <td class="Car_Number">{{Car.Car_Number}}</td>
+                    <td class="Expenses">{{Car.Expenses}}</td>
+                    <td class="Insurance_License">{{Car.Insurance_License}}</td>
+                    <td class="Car_Fuel_Type">{{Car.Car_Fuel_Type}}</td>
+                    <td class="Car_Fuel_Price">{{Car.Car_Fuel_Price}}</td>
+                    <td class="Car_Type">{{Car.Car_Type}}</td>
+                    <td class="Car_Year_Release">{{Car.Car_Year_Release}}</td>
+                    <td class="Car_Passenger_Number">{{Car.Car_Passenger_Number}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/dashboard/car/edit-car',Car.Car_ID_PK]"
+            routerLinkActive="active">Edit</button>
+        <button type="button" class="btn btn-light" id="delete" (click)="deleteCar(Car.Car_ID_PK)">delete</button>
+    </div>
+</div>
+<div class="Car">
+    <a class="btn btn-light" id="Add" routerLink="/dashboard/add-car">Add New Car</a>
+</div>

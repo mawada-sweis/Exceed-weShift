@@ -24,6 +24,12 @@ import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
+import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.component';
+import { ShiftListComponent } from './dashboard/shift/shift-list/shift-list.component';
+import { EditShiftComponent } from './dashboard/shift/edit-shift/edit-shift.component';
+import { CarListComponent } from './dashboard/car/car-list/car-list.component';
+import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
+import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
 
 
 @NgModule({
@@ -49,6 +55,13 @@ import { ShiftComponent } from './dashboard/shift/shift.component';
     SalaryComponent,
     ShiftComponent,
     CustomersComponent
+    AddShiftComponent,
+    ShiftListComponent,
+    EditShiftComponent,
+    CarListComponent,
+    AddCarComponent,
+    EditCarComponent
+
   ],
   imports: [
     BrowserModule,

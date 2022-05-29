@@ -12,9 +12,17 @@ import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
+
 import { AddCustomerComponent } from './dashboard/customer/add-customer/add-customer.component';
 import { CustomerListComponent } from './dashboard/customer/customer-list/customer-list.component';
 import { EditCustomerComponent } from './dashboard/customer/edit-customer/edit-customer.component';
+
+import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.component';
+import { ShiftListComponent } from './dashboard/shift/shift-list/shift-list.component';
+import { EditShiftComponent } from './dashboard/shift/edit-shift/edit-shift.component';
+import { CarListComponent } from './dashboard/car/car-list/car-list.component';
+import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
+import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -33,7 +41,21 @@ const routes: Routes = [
       },
       {
         path:'car',
-        component:CarComponent
+        component:CarComponent,
+        children:[
+          {
+            path:"car-list",
+            component:CarListComponent
+          },
+          {
+            path:"add-car",
+            component:AddCarComponent
+          },
+          {
+            path:"edit-car",
+            component:EditCarComponent
+          }
+        ]
       },
       {
         path:'customer',
@@ -57,7 +79,21 @@ const routes: Routes = [
       },
       {
         path:'shift',
-        component:ShiftComponent
+        component:ShiftComponent,
+        children:[
+          {
+            path:"add-shift",
+            component:AddShiftComponent
+          },
+          {
+            path:"shift-list",
+            component:ShiftListComponent
+          },
+          {
+            path:"edit-shift",
+            component:EditShiftComponent
+          }
+        ]
       }
     ]
   },

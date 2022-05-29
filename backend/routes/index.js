@@ -21,4 +21,13 @@ router.post('/salary', function(req, res) {
 
 
 
+router.post('/car', function(req, res) {
+    res.redirect('./CarRouter');
+  });
+
+
+router.post('/shift', function(req, res) {
+    res.redirect('./ShiftsRouter');
+  });
+
   module.exports = router;
