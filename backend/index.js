@@ -34,6 +34,13 @@ var authRouter = require('./routes/authRouter');
 // Import salary routes
 var salaryRouter = require('./routes/salaryRouter');  
 
+// Import customer routes
+var CustomerRouter = require('./routes/CustomerRouter');  
+
+// Import feedback routes
+var FeedbackRouter = require('./routes/FeedbackRouter');  
+
+
 // Using the index routes
 app.use('/', indexRouter);
 
@@ -42,3 +49,11 @@ app.use('/authentication', authRouter);
 
 // Using the salary routes
 app.use('/salary', salaryRouter);
+
+// Using the customer routes
+app.use('/customer', CustomerRouter);
+
+// Using the feedback routes
+app.use('/feedback', FeedbackRouter);
+
+
