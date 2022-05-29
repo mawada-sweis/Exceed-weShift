@@ -14,7 +14,7 @@ router.post('/salary', function(req, res) {
     res.redirect('./CustomerRouter');
   });
 
-  router.post('/feedback', function(req, res) {
+  router.post('/Feedback', function(req, res) {
     res.redirect('./FeedbackRouter');
   });
 
