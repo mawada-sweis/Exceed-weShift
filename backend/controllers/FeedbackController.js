@@ -1,4 +1,4 @@
-const db = require('../models/promise-database');
+const db = require('../models/Promise_database');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');

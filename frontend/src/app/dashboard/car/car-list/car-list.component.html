@@ -43,11 +43,11 @@
             </tbody>
         </table>
         <br>
-        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/dashboard/car/edit-car',Car.Car_ID_PK]"
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/editcar',Car.Car_ID_PK]"
             routerLinkActive="active">Edit</button>
         <button type="button" class="btn btn-light" id="delete" (click)="deleteCar(Car.Car_ID_PK)">delete</button>
     </div>
 </div>
 <div class="Car">
-    <a class="btn btn-light" id="Add" routerLink="/dashboard/add-car">Add New Car</a>
+    <a class="btn btn-light" id="Add" routerLink="/addcar">Add New Car</a>
 </div>

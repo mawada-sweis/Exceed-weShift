@@ -24,6 +24,8 @@ import { CarListComponent } from './dashboard/car/car-list/car-list.component';
 import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
 import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
 
+
+
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
   {path:"home", component:HomepageComponent, children:[{path:"driver", component:AuthDriverComponent}]},
@@ -31,6 +33,9 @@ const routes: Routes = [
   {path:"addcustomer" , component: AddCustomerComponent},
   {path:"customer-list" , redirectTo: 'dashboard/customer'},
   {path:"editcustomer/:email" , component: EditCustomerComponent},
+  {path:"addcar" , component: AddCarComponent},
+  {path:"car-list" , redirectTo: 'dashboard/car'},
+  {path:"editcar/:email" , component: EditCarComponent},
   {
     path:'dashboard',
     component:DashboardComponent,
@@ -110,3 +115,7 @@ export class AppRoutingModule { }
 export const CustomersComponent = [ AddCustomerComponent,
   EditCustomerComponent,
   CustomerListComponent]
+
+  export const CarsComponent = [ AddCarComponent,
+    EditCarComponent,
+    CarListComponent]

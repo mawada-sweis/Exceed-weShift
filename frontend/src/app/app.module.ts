@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule, CustomersComponent } from './app-routing.module';
+import { AppRoutingModule, CarsComponent, CustomersComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -54,7 +54,8 @@ import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
     RequestComponent,
     SalaryComponent,
     ShiftComponent,
-    CustomersComponent
+    CustomersComponent,
+    CarsComponent,
     AddShiftComponent,
     ShiftListComponent,
     EditShiftComponent,
