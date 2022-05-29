@@ -76,4 +76,18 @@ ul.horizontal-list {
 #delete{
   color:red ;
 }
+#edit{
+    color:blue;
+}
+#Add{
+    color: black;
+    border-radius: 2px;
 
+   background-color:khaki;
+}
+
+.Customer{
+    padding :300px 10px 10px 10px;
+    text-align: center;
+    
+}

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, CustomersComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -31,6 +31,7 @@ import { CarListComponent } from './dashboard/car/car-list/car-list.component';
 import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
 import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,12 +54,14 @@ import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
     RequestComponent,
     SalaryComponent,
     ShiftComponent,
+    CustomersComponent
     AddShiftComponent,
     ShiftListComponent,
     EditShiftComponent,
     CarListComponent,
     AddCarComponent,
     EditCarComponent
+
   ],
   imports: [
     BrowserModule,

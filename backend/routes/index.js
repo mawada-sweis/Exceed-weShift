@@ -10,6 +10,16 @@ router.post('/salary', function(req, res) {
     res.redirect('./salaryRouter');
   });
 
+  router.post('/Customer', function(req, res) {
+    res.redirect('./CustomerRouter');
+  });
+
+  router.post('/Feedback', function(req, res) {
+    res.redirect('./FeedbackRouter');
+  });
+
+
+
 
 router.post('/car', function(req, res) {
     res.redirect('./CarRouter');
