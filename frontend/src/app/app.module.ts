@@ -25,6 +25,7 @@ import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
 import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.component';
+import { ShiftListComponent } from './dashboard/shift/shift-list/shift-list.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.compone
     RequestComponent,
     SalaryComponent,
     ShiftComponent,
-    AddShiftComponent
+    AddShiftComponent,
+    ShiftListComponent
   ],
   imports: [
     BrowserModule,

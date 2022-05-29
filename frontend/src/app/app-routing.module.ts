@@ -13,6 +13,7 @@ import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
 import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.component';
+import { ShiftListComponent } from './dashboard/shift/shift-list/shift-list.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -28,13 +29,7 @@ const routes: Routes = [
       },
       {
         path:'car',
-        component:CarComponent,
-        children:[
-          {
-            path:"add-shift",
-            component:AddShiftComponent
-          }
-        ]
+        component:CarComponent
       },
       {
         path:'customer',
@@ -58,7 +53,17 @@ const routes: Routes = [
       },
       {
         path:'shift',
-        component:ShiftComponent
+        component:ShiftComponent,
+        children:[
+          {
+            path:"add-shift",
+            component:AddShiftComponent
+          },
+          {
+            path:"shift-list",
+            component:ShiftListComponent
+          }
+        ]
       }
     ]
   },
