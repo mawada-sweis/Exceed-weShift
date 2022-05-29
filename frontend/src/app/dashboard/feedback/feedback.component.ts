@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackComponent implements OnInit {
 
-  constructor() { }
+  FeedbackList: Array<any> = [];
+  constructor(private _http: HttpClient) {}
 
   ngOnInit(): void {
+    this._http
+      .get('http://localhost:3030/Feedback/')
+      .subscribe((response: any) => {
+        this.FeedbackList = response;
+      });
+      console.log(this.FeedbackList);
   }
+   
+  deleteFeedback(id : any): void {
+    let url = "http://localhost:3030/Feedback/delete/"+ id;
+     this._http.delete(url).subscribe(data=>{console.log(data)})
+     location.reload();
+     console.log(this.FeedbackList);
+  }
+  
 
 }

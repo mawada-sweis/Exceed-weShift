@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, CustomersComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -25,6 +25,7 @@ import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { ShiftComponent } from './dashboard/shift/shift.component';
     FeedbackComponent,
     RequestComponent,
     SalaryComponent,
-    ShiftComponent
+    ShiftComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,

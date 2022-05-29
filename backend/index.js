@@ -51,9 +51,7 @@ app.use('/authentication', authRouter);
 app.use('/salary', salaryRouter);
 
 // Using the customer routes
-app.use('/customer', CustomerRouter);
+app.use('/Customer', CustomerRouter);
 
 // Using the feedback routes
-app.use('/feedback', FeedbackRouter);
-
-
+app.use('/Feedback', FeedbackRouter);

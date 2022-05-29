@@ -12,11 +12,17 @@ import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
+import { AddCustomerComponent } from './dashboard/customer/add-customer/add-customer.component';
+import { CustomerListComponent } from './dashboard/customer/customer-list/customer-list.component';
+import { EditCustomerComponent } from './dashboard/customer/edit-customer/edit-customer.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
   {path:"home", component:HomepageComponent, children:[{path:"driver", component:AuthDriverComponent}]},
   {path:"dashboard", redirectTo: 'dashboard'},
+  {path:"addcustomer" , component: AddCustomerComponent},
+  {path:"customer-list" , redirectTo: 'dashboard/customer'},
+  {path:"editcustomer/:email" , component: EditCustomerComponent},
   {
     path:'dashboard',
     component:DashboardComponent,
@@ -63,3 +69,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+export const CustomersComponent = [ AddCustomerComponent,
+  EditCustomerComponent,
+  CustomerListComponent]
