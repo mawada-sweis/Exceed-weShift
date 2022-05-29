@@ -10,9 +10,14 @@ router.post('/salary', function(req, res) {
     res.redirect('./salaryRouter');
   });
 
-router.post('/request', function(req, res) {
+router.post('/request/admin', function(req, res) {
     res.redirect('./requestByAdminRouter');
   });
+
+router.post('/request/customer', function(req, res) {
+    res.redirect('./requestByAdminRouter');
+  });
+
 
 
   module.exports = router;
