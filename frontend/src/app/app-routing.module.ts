@@ -15,6 +15,7 @@ import { ShiftComponent } from './dashboard/shift/shift.component';
 import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.component';
 import { ShiftListComponent } from './dashboard/shift/shift-list/shift-list.component';
 import { EditShiftComponent } from './dashboard/shift/edit-shift/edit-shift.component';
+import { CarListComponent } from './dashboard/car/car-list/car-list.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -30,7 +31,13 @@ const routes: Routes = [
       },
       {
         path:'car',
-        component:CarComponent
+        component:CarComponent,
+        children:[
+          {
+            path:"car-list",
+            component:CarListComponent
+          }
+        ]
       },
       {
         path:'customer',
