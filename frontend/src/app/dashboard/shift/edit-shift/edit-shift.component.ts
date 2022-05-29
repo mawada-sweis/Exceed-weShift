@@ -40,7 +40,7 @@ export class EditShiftComponent implements OnInit {
     let ShiftStart = this.EditShiftComponent.get('Shift_Start')?.value
     let ShiftEnd = this.EditShiftComponent.get('Shift_End')?.value
 
-    let url = "http://localhost:3030/Shifts/Shifts";
+    let url = "http://localhost:3030/shift/update";
     let obj = {Shift_ID_PK:this.id , Driver_ID_FK:DriverIDFK , Car_ID_FK:CarIDFK , Shift_Request_Number : ShiftRequestNumber ,
       Insurance_License : InsuranceLicense, Shift_Start : ShiftStart,Shift_End :ShiftEnd}
     this._http.put(url,obj).subscribe(data=>{console.log(data)

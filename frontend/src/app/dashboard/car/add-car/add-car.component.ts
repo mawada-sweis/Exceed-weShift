@@ -53,7 +53,7 @@ export class AddCarComponent implements OnInit {
 
     }
 
-    this._http.post("http://localhost:3030/Car/Car", body)
+    this._http.post("http://localhost:3030/car/add", body)
       .subscribe((x) => console.log(x))
 
 

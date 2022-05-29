@@ -15,7 +15,7 @@ export class CarListComponent implements OnInit {
 
   ngOnInit(): void {
     this._http
-      .get('http://localhost:3030/Car/Car')
+      .get('http://localhost:3030/car')
       .subscribe((response: any) => {
         this.CarList = response;
       });
@@ -23,7 +23,7 @@ export class CarListComponent implements OnInit {
   }
 
   deleteCar(id: any): void {
-    let url = "http://localhost:3030/Car/Car/" + id;
+    let url = "http://localhost:3030/car/" + id;
     this._http.delete(url).subscribe(data => { console.log(data) })
     location.reload();
     console.log(this.CarList);
