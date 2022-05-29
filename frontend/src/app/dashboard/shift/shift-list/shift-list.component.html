@@ -35,7 +35,7 @@
             </tbody>
         </table>
         <br>
-        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/edit-shift',Shifts.Shift_ID_PK]"
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/dashboard/shift/edit-shift',Shifts.Shift_ID_PK]"
             routerLinkActive="active">Edit</button>
         <button type="button" class="btn btn-light" id="delete"
             (click)="deleteShifts(Shifts.Shift_ID_PK)">delete</button>
