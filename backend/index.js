@@ -29,7 +29,14 @@ console.log(`Visit localhost:${app.get('port')}`);
 var indexRouter = require('./routes/index');
 
 // Import Authentication routes
-var authRouter = require('./routes/authRouter');  
+var authRouter = require('./routes/authRouter');
+
+// Import Admin routes
+var AdminRouter = require('./routes/AdminRouter');
+
+// Import Driver routes
+var DriverRouter = require('./routes/DriverRouter');
+
 
 // Import salary routes
 var salaryRouter = require('./routes/salaryRouter');  
@@ -51,6 +58,13 @@ app.use('/', indexRouter);
 
 // Using the Authentication routes
 app.use('/authentication', authRouter);
+
+// Using the Admin routes
+app.use('/Admin', AdminRouter);
+
+// Using the Driver routes
+app.use('/Driver', DriverRouter);
+
 
 // Using the salary routes
 app.use('/salary', salaryRouter);
