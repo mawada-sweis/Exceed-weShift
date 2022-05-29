@@ -24,6 +24,9 @@ import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
+import { AddCustomerComponent } from './customer/add-customer/add-customer.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { ShiftComponent } from './dashboard/shift/shift.component';
     FeedbackComponent,
     RequestComponent,
     SalaryComponent,
-    ShiftComponent
+    ShiftComponent,
+    AddCustomerComponent,
+    EditCustomerComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,
