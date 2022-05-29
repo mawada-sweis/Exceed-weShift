@@ -17,6 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './dashboard/navbar/navbar/navbar.component';
 import { AddCustomerComponent } from './add-customer/add-customer/add-customer.component';
 import { CustomerListComponent } from './customer-list/customer-list/customer-list.component';
+import { EditCustomerComponent } from './edit-customer/edit-customer/edit-customer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CustomerListComponent } from './customer-list/customer-list/customer-li
     DashboardComponent,
     NavbarComponent,
     AddCustomerComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,
