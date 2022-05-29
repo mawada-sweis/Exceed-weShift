@@ -13,4 +13,11 @@ router.post('/login', auth_controller.login);
 router.post('/signup', auth_controller.signup);
 
 router.post('/driver/login', auth_controller.driver_login);
+
+// delete request for delete customer
+router.delete('/delete/customer', auth_controller.delete_profile);
+
+// put request for update customer
+router.put('/update/customer', auth_controller.update_profile);
+
 module.exports = router;

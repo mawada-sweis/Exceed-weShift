@@ -11,6 +11,33 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json())
 
+exports.delete_profile = async (req, res) => {
+
+
+    let customer = "DELETE FROM `Customer` WHERE Customer_Email_PK = ?";
+    con.query(customer, [req.body.Customer_Email_PK], 
+        (err, res) => {
+        if (err) throw err;
+    });
+
+    res.status(200).json({status: true});
+
+};
+
+exports.update_profile = async (req, res) => {
+
+
+    let customer = "UPDATE `Customer` SET `Customer_Phone`=?,`Customer_Name`=?,`Customer_City`=?,`Customer_Active`=? \
+                    WHERE Customer_Email_PK = ?";
+    con.query(customer, [req.body.Customer_Phone, req.body.Customer_Name, req.body.Customer_City, req.body.Customer_Active, req.body.Customer_Email_PK], 
+        (err, res) => {
+        if (err) throw err;
+    });
+
+    res.status(200).json({status: true});
+
+};
+
 exports.login = async (req, res) => {
     let email = req.body.email;
     const code = Math.floor(1000 + Math.random() * 9000);
