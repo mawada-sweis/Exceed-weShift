@@ -36,6 +36,9 @@ const routes: Routes = [
   {path:"addcar" , component: AddCarComponent},
   {path:"car-list" , redirectTo: 'dashboard/car'},
   {path:"editcar/:email" , component: EditCarComponent},
+  {path:"addshitf" , component: AddShiftComponent},
+  {path:"shift-list" , redirectTo: 'dashboard/shift'},
+  {path:"editshift/:id" , component: EditShiftComponent},
   {
     path:'dashboard',
     component:DashboardComponent,
