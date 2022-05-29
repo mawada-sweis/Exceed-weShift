@@ -14,7 +14,7 @@ export class CustomerListComponent implements OnInit {
 
   ngOnInit(): void {
     this._http
-      .get('http://localhost:3030/Customer/Customer')
+      .get('http://localhost:3030/Customer/')
       .subscribe((response: any) => {
         this.CustomersList = response;
       });
@@ -22,7 +22,7 @@ export class CustomerListComponent implements OnInit {
   }
    
   deleteCustomer(id : any): void {
-    let url = "http://localhost:3030/Customer/Customer/"+ id;
+    let url = "http://localhost:3030/Customer/delete/"+ id;
      this._http.delete(url).subscribe(data=>{console.log(data)})
      location.reload();
      console.log(this.CustomersList);

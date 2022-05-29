@@ -39,7 +39,7 @@ export class AddCustomerComponent implements OnInit {
 
     }
     
-    this._http.post("http://localhost:3030/Customer/Customer" , body)
+    this._http.post("http://localhost:3030/Customer/add" , body)
    .subscribe((x)=> console.log(x))
 }
 

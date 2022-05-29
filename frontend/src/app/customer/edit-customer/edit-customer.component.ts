@@ -36,7 +36,7 @@ export class EditCustomerComponent implements OnInit {
     let CustomerCity = this.EditCustomerForm.get('Customer_City')?.value
     let Customer_Active = this.EditCustomerForm.get('Customer_Active')?.value
 
-    let url = "http://localhost:3030/Customer/Customer";
+    let url = "http://localhost:3030/Customer/update";
     let obj = {Customer_Email_PK:this.email , Customer_Name:CustomerName , Customer_Phone:CustomerNumber ,
       Customer_City : CustomerCity, Customer_Active : Customer_Active}
     this._http.put(url,obj).subscribe(data=>{console.log(data)
