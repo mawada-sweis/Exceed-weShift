@@ -37,7 +37,9 @@ ul.horizontal-list {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px 10px 15px 15px;
+  margin: 10px 10px 15px 300px;
+
+  
   
 }
 

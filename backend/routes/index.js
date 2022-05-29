@@ -10,7 +10,7 @@ router.post('/salary', function(req, res) {
     res.redirect('./salaryRouter');
   });
 
-  router.post('/customer', function(req, res) {
+  router.post('/Customer', function(req, res) {
     res.redirect('./CustomerRouter');
   });
 
