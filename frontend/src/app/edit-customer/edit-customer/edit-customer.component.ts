@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditCustomerComponent implements OnInit {
 
-  editCustomerForm: FormGroup = this._formbuilder.group({
+  EditCustomerForm: FormGroup = this._formbuilder.group({
     Customer_Name : ['' , Validators.required],
     Customer_Phone : ['' , Validators.required],
     Customer_Email_PK : ['' , Validators.required],
@@ -30,11 +30,11 @@ export class EditCustomerComponent implements OnInit {
   }
 
   editCustomer(){
-    let CustomerName = this.editCustomerForm.get('Customer_Name')?.value
-    let CustomerNumber = this.editCustomerForm.get('Customer_Phone')?.value
-    let CustomerEmail = this.editCustomerForm.get('Customer_Email_PK')?.value
-    let CustomerCity = this.editCustomerForm.get('Customer_City')?.value
-    let Customer_Active = this.editCustomerForm.get('Customer_Active')?.value
+    let CustomerName = this.EditCustomerForm.get('Customer_Name')?.value
+    let CustomerNumber = this.EditCustomerForm.get('Customer_Phone')?.value
+    let CustomerEmail = this.EditCustomerForm.get('Customer_Email_PK')?.value
+    let CustomerCity = this.EditCustomerForm.get('Customer_City')?.value
+    let Customer_Active = this.EditCustomerForm.get('Customer_Active')?.value
 
     let url = "http://localhost:3030/Customer/Customer";
     let obj = {Customer_Email_PK:this.email , Customer_Name:CustomerName , Customer_Phone:CustomerNumber ,

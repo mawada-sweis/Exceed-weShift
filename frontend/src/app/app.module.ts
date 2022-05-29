@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,ArrayOfCustomer } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -15,9 +15,7 @@ import { SignupComponent } from './homepage/auth/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './dashboard/navbar/navbar/navbar.component';
-import { AddCustomerComponent } from './add-customer/add-customer/add-customer.component';
-import { CustomerListComponent } from './customer-list/customer-list/customer-list.component';
-import { EditCustomerComponent } from './edit-customer/edit-customer/edit-customer.component';
+;
 
 @NgModule({
   declarations: [
@@ -32,9 +30,8 @@ import { EditCustomerComponent } from './edit-customer/edit-customer/edit-custom
     OtpComponent,
     DashboardComponent,
     NavbarComponent,
-    AddCustomerComponent,
-    CustomerListComponent,
-    EditCustomerComponent
+    ArrayOfCustomer,
+  
   ],
   imports: [
     BrowserModule,

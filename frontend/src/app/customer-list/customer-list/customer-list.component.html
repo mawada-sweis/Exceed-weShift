@@ -32,10 +32,10 @@
 </tbody>
     </table>
         <br>
-        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/Edit-Customer',Customer.Customer_Email_PK]" routerLinkActive="active" >Edit</button>
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/editcustomer',Customer.Customer_Email_PK]" routerLinkActive="active" >Edit</button>
         <button type="button" class="btn btn-light" id="delete" (click)="deleteCustomer(Customer.Customer_Email_PK)">delete</button>
       </div>
   </div>
   <div class="Customer">
-    <a class="btn btn-light" id="Add" routerLink="/add-customer">Add New Customer</a>
+    <a class="btn btn-light" id="Add" routerLink="/addcustomer">Add New Customer</a>
   </div>
