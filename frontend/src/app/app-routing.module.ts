@@ -17,9 +17,9 @@ const routes: Routes = [
   {path:"car",component:CarComponent},
   {path:"car-list",component:CarListComponent},
   {path:"edit-car/:id",component:EditCarComponent},
-  {path:"edit-shift/id",component:EditShiftComponent},
+  {path:"edit-shift/:id",component:EditShiftComponent},
   {path:"add-shift",component:AddShiftComponent},
-  {path:"shiftlist",component:ShiftListComponent},
+  {path:"shift-list",component:ShiftListComponent},
   {path:"**", component:NotFoundComponent}
   
 ];

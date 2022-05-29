@@ -43,8 +43,8 @@ response.status(200).json("row deleted");
 
 //Update Car "Shift_ID_PK" where Shift_Start
 exports.update_Shift_Start = async(request,response)=>{
-let sql="UPDATE Shifts SET Shift_Start=? WHERE Shift_ID_PK=?"
-let result1=await db.connection.execute(sql,[request.body.Shift_Start,request.body.Shift_ID_PK]);
+let sql="UPDATE Shifts SET Shift_Start=?,Shift_End=?,Shift_Request_Number=? WHERE Shift_ID_PK=?"
+let result1=await db.connection.execute(sql,[request.body.Shift_Start,request.body.Shift_End,request.body.Shift_Request_Number,request.body.Shift_ID_PK]);
 response.status(200).json("row edited");
 
 }

@@ -5,7 +5,7 @@
             <div class="card-body" style="background-color: rgb(236, 235, 235);">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 style='font-size:48px'>Full Name<i class='far fa-user-circle'></i></h4>
+                        <h4 style='font-size:48px'>Shift List<i class='far fa-user-circle'></i></h4>
                         <hr>
                     </div>
                 </div>
@@ -13,44 +13,44 @@
                     <div class="col-md-12">
                         <form name="AddShiftForm" id="AddShiftForm" [formGroup]="AddShiftForm" novalidate style="background-color: rgb(236, 235, 235);">
                           <div class="singel-form form-group row">
-                            <label for="Shift_ID_PK" class="col-4 col-form-label">Shift_ID_PK</label> 
+                            <label for="Shift_ID_PK" class="col-4 col-form-label">Shift ID </label> 
                             <div class="col-8">
-                              <input formControlName="Shift_ID_PK" name="Shift_ID_PK" placeholder="Shift_ID_PK" class="form-control here" type="number" required="required">
+                              <input formControlName="Shift_ID_PK" name="Shift_ID_PK" placeholder="Shift ID " class="form-control here" type="number" required="required">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="Driver_ID_FK" class="col-4 col-form-label" >Driver_ID_FK</label> 
+                            <label for="Driver_ID_FK" class="col-4 col-form-label" >Driver ID</label> 
                             <div class="col-8">
-                              <input formControlName="Driver_ID_FK" name="Driver_ID_FK" placeholder="Driver_ID_FK" class="form-control here" type="number"  required="required" >
+                              <input formControlName="Driver_ID_FK" name="Driver_ID_FK" placeholder="Driver ID" class="form-control here" type="text"  required="required" >
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="Car_ID_FK" class="col-4 col-form-label">Car_ID_FK </label> 
+                            <label for="Car_ID_FK" class="col-4 col-form-label">Car ID</label> 
                             <div class="col-8">
-                              <input formControlName="Car_ID_FK" name="Car_ID_FK" placeholder="Car_ID_FK" class="form-control here" type="text" required="required">
+                              <input formControlName="Car_ID_FK" name="Car_ID_FK" placeholder="Car ID " class="form-control here" type="text" required="required">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="Shift_Request_Number" class="col-4 col-form-label">Shift_Request_Number </label> 
+                            <label for="Shift_Request_Number" class="col-4 col-form-label">Request Number </label> 
                             <div class="col-8">
-                              <input formControlName="Shift_Request_Number" name="Shift_Request_Number" placeholder="Shift_Request_Number" class="form-control here" type="text" required="required">
+                              <input formControlName="Shift_Request_Number" name="Shift_Request_Number" placeholder="Request Number" class="form-control here" type="text" required="required">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="Shift_Start" class="col-4 col-form-label">Shift_Start </label> 
+                            <label for="Shift_Start" class="col-4 col-form-label">Shift Start </label> 
                             <div class="col-8">
-                              <input formControlName="Shift_Start" name="Shift_Start" placeholder="Shift_Start" class="form-control here" type="text" required="required">
+                              <input formControlName="Shift_Start" name="Shift_Start" placeholder="Shift Start" class="form-control here" type="text" required="required">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="Shift_End" class="col-4 col-form-label"> Shift_End </label> 
+                            <label for="Shift_End" class="col-4 col-form-label"> Shift End </label> 
                             <div class="col-8">
-                              <input formControlName="Shift_End" name="Shift_End" placeholder="Shift_End" class="form-control here" type="text" required="required">
+                              <input formControlName="Shift_End" name="Shift_End" placeholder="Shift End" class="form-control here" type="text" required="required">
                             </div>
                           </div>
                           <div class="form-group row">
                             <div class="offset-4 col-8">
-                              <button (click)="onSave()" type="submit" class="button-A">Add Shift</button>
+                              <button routerLink="/shift-list" routerLinkActive="active"  (click)="onSave()" type="submit" class="button-A">Add Shift</button>
                             </div>
                           </div>
                         </form>
