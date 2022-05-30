@@ -24,12 +24,12 @@ ul.horizontal-list {
   ul.horizontal-list li {
     display: inline-block;
     padding: 0 0.1rem;
-    min-width: 19.8rem;
+    min-width: 21.3rem;
   text-align: left;
   }
  
   
-.customer-list {
+.Admin-list {
   position: absolute;
   left: 0;
   right: 0;
@@ -37,9 +37,7 @@ ul.horizontal-list {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px 10px 15px 300px;
-
-  
+  margin: 10px 10px 15px 15px;
   
 }
 
@@ -76,4 +74,17 @@ ul.horizontal-list {
 #delete{
   color:red ;
 }
+#edit{
+    color:blue;
+}
+#Add{
+    color: black;
+    border-radius: 2px;
 
+   background-color:khaki;
+}
+
+.Admin{
+    padding :370px 10px 10px 10px;
+    text-align: center; 
+}

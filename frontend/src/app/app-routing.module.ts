@@ -24,7 +24,12 @@ import { CarListComponent } from './dashboard/car/car-list/car-list.component';
 import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
 import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
 
+import { AddDriverComponent } from './add-driver/add-driver.component';
+import { EditDriverComponent } from './edit-driver/edit-driver.component';
 
+import { AdminListComponent } from './admin-list/admin-list.component';
+import { AddAdminComponent } from './add-admin/add-admin.component';
+import { EditAdminComponent } from './edit-admin/edit-admin.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -38,6 +43,11 @@ const routes: Routes = [
   {path:"editcar/:email" , component: EditCarComponent},
   {path:"addshitf" , component: AddShiftComponent},
   {path:"shift-list" , redirectTo: 'dashboard/shift'},
+  {path:"add-driver" ,component: AddDriverComponent},
+  {path:"Edit-Driver/:email", component:EditDriverComponent},
+  {path:"Admin-list", component:AdminListComponent},
+  {path:"Add-Admin", component:AddAdminComponent},
+  {path:"Edit-Admin/:email", component:EditAdminComponent},
   {path:"editshift/:id" , component: EditShiftComponent},
   {
     path:'dashboard',
@@ -119,6 +129,10 @@ export const CustomersComponent = [ AddCustomerComponent,
   EditCustomerComponent,
   CustomerListComponent]
 
-  export const CarsComponent = [ AddCarComponent,
+export const CarsComponent = [ AddCarComponent,
     EditCarComponent,
     CarListComponent]
+
+export const DriverComponents = [AddDriverComponent,EditDriverComponent ]
+
+export const AdminComponents=[EditAdminComponent,AddAdminComponent,AdminListComponent]

@@ -1,0 +1,35 @@
+<div class=" background_image jumbotron bg-cover text-black" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url(https://cdn4.vectorstock.com/i/1000x1000/52/98/isometric-3d-map-with-location-pins-gps-vector-17835298.jpg) "  >
+    <div class="container mt-5 mb-5">
+                      <div class="d-flex justify-content-center"> 
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                            <form name="AddAdmin" id="AddAdmin" [formGroup]="AddAdminForm" novalidate style="background-color: rgb(236, 235, 235);">
+                               <h4 class="text-center " style="margin-top: 10px;">Profile Settings</h4> 
+                           <div class="row mt-2" > 
+                               <div class="col-md-6">
+                                   <label class="labels">Name</label>
+                                   <input formControlName="Admin_Name" type="text" class="form-control" style="margin-left: 10px;" placeholder="name" required="required">
+                               </div>
+                                   </div>
+                                    <div class="row mt-3"> <div class="col-md-12"><label class="labels">PhoneNumber</label>
+                                       <input formControlName="Admin_Phone" type="number" class="form-control" style="margin-left: 10px; width: 90%;" placeholder="enter phone number" required="required">
+                                   </div> 
+                                       <div class="col-md-12"><label class="labels">City</label>
+                                           <input formControlName="Admin_City" type="text" class="form-control"style="margin-left: 10px; width: 90%;" placeholder="enter address" required="required">
+                                       </div>
+                                      
+                                       <div class="col-md-12"><label class="labels">Email</label>
+                                           <input  formControlName="Admin_Email" type="text" style="margin-left: 10px; width: 90%;" class="form-control" placeholder="enter email address" required="required">
+                                          
+                                       </div>
+                                   </div> 
+                                                 <div class="mt-5 text-center">
+                                                     <button  routerLink="/Admin-list" routerLinkActive="active" (click)="onSave()" type="submit" id="Save">Save</button>
+                                                        </div>
+                                                       
+                                                       
+                            </form>
+                          </div>
+                      </div>
+                      </div>
+                      </div>
+                   

@@ -1,4 +1,4 @@
-.button-A {
+.button-E {
     background-color:orange;
     padding: 5px 30px 5px 30px;
     display: inline-block; 
@@ -6,14 +6,13 @@
           margin: 5px 5px;
           cursor: pointer;
           border-radius: 10px;
-          
+         color: black; 
     
     }
     .container{
+        margin-top:50px ;
         height: 200px;
         width: 35%;
-        margin-top:40px ;
-        
     }
     
     .button-A:hover {
@@ -24,5 +23,5 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 1100px;
+        height: 900px;
     }

@@ -27,7 +27,7 @@ ul.horizontal-list {
 ul.horizontal-list li {
   display: inline-block;
   padding: 0 0.1rem;
-  min-width: 8.2rem;
+  min-width: 7.4rem;
   text-align: left;
 }
 
@@ -86,7 +86,6 @@ ul.horizontal-list li {
 #Add {
   color: black;
   border-radius: 2px;
-
   background-color: khaki;
 }
 
