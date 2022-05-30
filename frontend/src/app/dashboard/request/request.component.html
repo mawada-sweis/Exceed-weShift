@@ -1,1 +1,56 @@
-<p>request works!</p>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Requests</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Request ID</th>
+                          <th>Driver ID </th>
+                          <th>Customer ID </th>
+                          <th>Request Driver Shift </th>
+                          <th>Request Type </th>
+                          <th>Reuest Price</th>
+                          <th>Reuest City Destination</th>
+                          <th>Reuest City Location</th>
+                          <th>Request Destination</th>
+                          <th>Request Location</th>
+                          <th>Request Time</th>
+                          <th>Request Passenger Number</th>
+                          <th>Request Is Luggage</th>
+                          <th>Request All One</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let req of requestList">
+                          <th scope="row">{{req.Request_ID_PK}}</th>
+                          <td>{{req.Driver_ID_FK}}</td>
+                          <td>{{req.Customer_ID_FK}}</td>
+                          <td>{{req.Request_Driver_Shift_FK}}</td>
+                          <td>{{req.Request_Type}}</td>
+                          <td>{{req.Reuest_Price}}</td>
+                          <td>{{req.Reuest_City_Destination}}</td>
+                          <td>{{req.Reuest_City_Location}}</td>
+                          <td>{{req.Request_Destination}}</td>
+                          <td>{{req.Request_Location}}</td>
+                          <td>{{req.Request_Time}}</td>
+                          <td>{{req.Request_Passenger_Number}}</td>
+                          <td>{{req.Request_Is_Luggage}}</td>
+                          <td>{{req.Request_All_One}}</td>
+                          <td><button class="btn btn-danger" (click)="deleteRequest(req.Request_ID_PK)" >Delete</button></td>
+                          <td><button href="#" class="btn btn-warning">Update</button></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

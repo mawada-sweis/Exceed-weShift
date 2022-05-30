@@ -37,7 +37,7 @@ exports.show_by_admin = async (req, res) => {
 
 exports.delete_by_admin = async (req, res) => {
 
-    let salary = "DELETE FROM `Request` WHERE  `Request_ID_PK`= ?";
+    let salary = "DELETE FROM `Request` WHERE `Request_ID_PK`= ?";
     con.query(salary, [req.params.id], 
         (err, res) => {
         if (err) throw err;
