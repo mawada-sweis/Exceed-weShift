@@ -30,6 +30,9 @@ import { EditDriverComponent } from './edit-driver/edit-driver.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { EditAdminComponent } from './edit-admin/edit-admin.component';
+import { AdddeleteSalaryComponent } from './dashboard/salary/adddelete-salary/adddelete-salary.component';
+import { EditSalaryComponent } from './dashboard/salary/edit-salary/edit-salary.component';
+import { SalaryListComponent } from './dashboard/salary/salary-list/salary-list.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"home", pathMatch:"full"},
@@ -93,7 +96,20 @@ const routes: Routes = [
       },
       {
         path:'salary',
-        component:SalaryComponent
+        component:SalaryComponent,children:[
+          {
+            path:"salary-list",
+            component:SalaryListComponent
+          },
+          {
+            path:"adddelete-salary",
+            component:AdddeleteSalaryComponent
+          },
+          {
+            path:"edit-salary",
+            component:EditSalaryComponent
+          }
+        ]
       },
       {
         path:'shift',

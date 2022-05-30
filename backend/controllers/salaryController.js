@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-exports.salary = async(req, res) => {
+exports.salary = (req, res) => {
     let query1 = "SELECT * FROM Salary";
     con.query(query1, (error, results) => {
         if (error) {
@@ -31,17 +31,6 @@ exports.getSalaryID = async(req, res) => {
     });
     console.log('get Salary');
 };
-/** 
- * Get Salary ID 
- * CRUD - Read
- */
-// exports.getSalaryID = async(req, res) => {
-//     var salary_ID = req.params.salary_ID_FK
-//     let query1 = 'SELECT * FROM Salary WHERE Salary_ID_FK=?';
-//     let result = await con.connection.execute(query1, [salary_ID_FK])
-//     res.status(200).json(result);
-//     console.log('get Salary');
-// }
 
 /**
  * Add a new salary

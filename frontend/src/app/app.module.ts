@@ -41,6 +41,9 @@ import { NumberRequestsComponent } from './dashboard/board-home/number-requests/
 import { CurrentShiftComponent } from './dashboard/board-home/current-shift/current-shift.component';
 import { NextDonationComponent } from './dashboard/board-home/next-donation/next-donation.component';
 import { RevenueComponent } from './dashboard/board-home/revenue/revenue.component';
+import { EditSalaryComponent } from './dashboard/salary/edit-salary/edit-salary.component';
+import { AdddeleteSalaryComponent } from './dashboard/salary/adddelete-salary/adddelete-salary.component';
+import { SalaryListComponent } from './dashboard/salary/salary-list/salary-list.component';
 
 
 @NgModule({
@@ -84,7 +87,10 @@ import { RevenueComponent } from './dashboard/board-home/revenue/revenue.compone
     NumberRequestsComponent,
     CurrentShiftComponent,
     NextDonationComponent,
-    RevenueComponent
+    RevenueComponent,
+    EditSalaryComponent,
+    AdddeleteSalaryComponent,
+    SalaryListComponent
 
   ],
   imports: [
