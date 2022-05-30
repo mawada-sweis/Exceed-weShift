@@ -53,6 +53,13 @@ var CarRouter = require('./routes/CarRouter');
 // Import shift routes
 var ShiftsRouter = require('./routes/ShiftsRouter');
 
+// Import salary routes
+var requestAdminRouter = require('./routes/requestByAdminRouter');  
+
+// Import salary routes
+var requestCustomerRouter = require('./routes/requestByCustomerRouter');  
+
+
 // Using the index routes
 app.use('/', indexRouter);
 
@@ -80,3 +87,9 @@ app.use('/car', CarRouter);
 
 // Using the shifts routes
 app.use('/shift',ShiftsRouter);
+
+// Using the salary routes
+app.use('/request/admin', requestAdminRouter);
+
+// Using the salary routes
+app.use('/request/customer', requestCustomerRouter);

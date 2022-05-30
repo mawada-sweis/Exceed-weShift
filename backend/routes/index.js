@@ -31,3 +31,12 @@ router.post('/shift', function(req, res) {
   });
 
   module.exports = router;
+  
+
+router.post('/request/admin', function(req, res) {
+  res.redirect('./requestByAdminRouter');
+});
+
+router.post('/request/customer', function(req, res) {
+  res.redirect('./requestByAdminRouter');
+});
