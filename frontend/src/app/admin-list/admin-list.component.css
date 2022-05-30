@@ -24,7 +24,7 @@ ul.horizontal-list {
   ul.horizontal-list li {
     display: inline-block;
     padding: 0 0.1rem;
-    min-width: 21.3rem;
+    min-width: 19rem;
   text-align: left;
   }
  
@@ -85,6 +85,6 @@ ul.horizontal-list {
 }
 
 .Admin{
-    padding :370px 10px 10px 10px;
+    margin :300px 10px 10px 10px;
     text-align: center; 
 }
