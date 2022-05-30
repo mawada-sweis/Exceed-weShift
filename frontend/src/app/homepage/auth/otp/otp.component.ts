@@ -33,7 +33,7 @@ export class OtpComponent implements OnInit {
       this.OTPForm.value.code4;
     if (code == this.codeUser) {
       if (this.emailType == 'Admin') {
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['dashboard/home']);
       }
       if (this.emailType == 'Customer') {
         this.router.navigate(['customer']);

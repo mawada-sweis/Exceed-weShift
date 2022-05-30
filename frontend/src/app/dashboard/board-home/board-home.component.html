@@ -1,81 +1,33 @@
-<p>board-home works!</p>
-
 <nav>
     <button routerLink="/Admin-list">Admin list</button>
 </nav>
-<router-outlet></router-outlet>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-        <table class="table table-bordered table-hover ">
-            <thead>
-                <tr>
-                    <th scope="col">Shift</th>
-                    <th scope="col">Started at</th>
-                    <th scope="col">Ends at</th>
-                </tr>
-            </thead>
-            <tbody *ngFor="let shift of shifts">
-                <tr>
-                    <td>{{shift.Shfit_ID_PK}}</td>
-                    <td>{{shift.Shift_Start}}</td>
-                    <td>{{shift.Shift_End}}</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="row">
+    <div class="col-sm-3">
+        <app-number-requests></app-number-requests>
+    </div>
+    <div class="col-sm-3">
+        <app-active-customers></app-active-customers>
 
     </div>
 
-    <div class="col">
-        <div class="card bg-warning m-2" *ngFor="let request of requests" style="width: 300px;">
-            <div class="card-body">
-                <h2 class="card-title">Number of Requests Today {{request.requests}} 3 </h2>
-            </div>
-        </div>
+    <div class="col-sm-3">
+        <app-next-donation> </app-next-donation>
     </div>
-    <div class="col">
-        <div class="card bg-warning m-2" *ngFor="let customer of active" style="width: 300px;">
-            <div class="card-body">
-                <h2 class="card-title">Active Customers Today {{customer.active}} 3 </h2>
-            </div>
-        </div>
+    <div class="col-sm-3">
+
+        <app-revenue> </app-revenue>
     </div>
 </div>
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-        <div class="card bg-warning m-2" *ngFor="let next of donation" style="width: 300px;">
-            <div class="card-body">
-                <h2 class="card-title">Total Costs Today {{next.salary}} 54</h2>
-            </div>
-        </div>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-6">
+        <app-current-shift></app-current-shift>
     </div>
-    <div class="col">
-        <div class="card bg-warning m-2" *ngFor="let total of revenue" style="width: 300px;">
-            <div class="card-body">
-                <h2 class="card-title">Total Revenue Today {{total.revenue}} 90</h2>
-            </div>
-        </div>
-    </div>
+    <div class="col-sm-6">
 
-    <div class="col">
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Shift ID</th>
-                    <th scope="col">Driver ID </th>
-                    <th scope="col">Car ID</th>
-                    <th scope="col">Request Number</th>
-                </tr>
-            </thead>
-            <tbody *ngFor="let shift of shiftInfo;">
-                <tr>
-                    <td>{{shift.Shfit_ID_PK}}</td>
-                    <td>{{shift.Driver_ID_FK}}</td>
-                    <td>{{shift.Car_ID_FK}}</td>
-                    <td>{{shift.Shift_Request_Number}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <app-shift-info></app-shift-info>
     </div>
 </div>

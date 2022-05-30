@@ -1,0 +1,19 @@
+<div class="col">
+    <table class="table table-bordered table-hover ">
+        <thead>
+            <tr>
+                <th scope="col">Shift</th>
+                <th scope="col">Started at</th>
+                <th scope="col">Ends at</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let shift of shifts">
+            <tr>
+                <td>{{shift.Shift_ID_PK}}</td>
+                <td>{{shift.Shift_Start}}</td>
+                <td>{{shift.Shift_End}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
