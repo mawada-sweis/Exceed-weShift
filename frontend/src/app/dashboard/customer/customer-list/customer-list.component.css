@@ -18,7 +18,7 @@
 ul.horizontal-list {
     list-style: none;
     background-color:khaki;
-    margin: 30px 10px 10px 10px;
+    margin: 10px 10px 10px 0px;
     padding :10px 10px 10px 10px;
  }
   ul.horizontal-list li {
@@ -90,4 +90,13 @@ ul.horizontal-list {
     padding :300px 10px 10px 10px;
     text-align: center;
     
+}
+
+.Customer-Active{
+  padding-left: 10%;
+}
+
+.Customer-City{
+  padding-left: 5%;
+
 }
