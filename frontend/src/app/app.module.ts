@@ -35,8 +35,6 @@ import { EditDriverComponent } from './edit-driver/edit-driver.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { EditAdminComponent } from './edit-admin/edit-admin.component';
-import { RequestFormComponent } from './dashboard/request/request-form/request-form.component';
-
 
 @NgModule({
   declarations: [
@@ -73,8 +71,7 @@ import { RequestFormComponent } from './dashboard/request/request-form/request-f
     EditDriverComponent,
     AdminListComponent,
     AddAdminComponent,
-    EditAdminComponent,
-    RequestFormComponent
+    EditAdminComponent
 
   ],
   imports: [
