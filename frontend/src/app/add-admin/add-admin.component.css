@@ -1,0 +1,45 @@
+
+.form-control:focus{box-shadow: none;border-color: #BA68C8}
+.profile-button{background: orange(99, 39, 120);box-shadow: none;border: none}
+.profile-button:hover{background: #272f73}
+.profile-button:focus{background: #682773;box-shadow: none}
+.profile-button:active{background: #682773;box-shadow: none}
+.back:hover{color: #682773;cursor: pointer}
+.labels{font-size: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+    
+}
+    
+
+.add-experience:hover{background: #BA68C8;color: #fff;cursor: pointer;border: solid 1px #BA68C8}
+#Save{
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+}
+#Save:hover {
+    background-color: darkgray;
+}
+.image {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+
+.bg-cover {
+    background-attachment: static;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}

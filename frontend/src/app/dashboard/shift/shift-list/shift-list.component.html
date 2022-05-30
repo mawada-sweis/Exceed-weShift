@@ -1,0 +1,46 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8"
+    style=" height: 230px;   background-image: url(https://media.istockphoto.com/vectors/set-of-diverse-taxi-cars-and-drivers-funny-taxi-driver-posing-near-vector-id1136287628)">
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- page banner cont -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <br><br><br>
+</section>
+<ul class="horizontal-list">
+    <li>Shift ID</li>
+    <li>Driver ID </li>
+    <li>Car ID</li>
+    <li>Request Number</li>
+    <li>Shift Start</li>
+    <li>Shift End</li>
+
+</ul>
+<div class="shift-list">
+    <div class="list-item" *ngFor="let Shifts of ShiftList">
+        <table class="users">
+
+            <tbody>
+                <tr>
+                    <td class="Shift_ID_PK">{{Shifts.Shift_ID_PK}}</td>
+                    <td class="Driver_ID_FK">{{Shifts.Driver_ID_FK}}</td>
+                    <td class="Car_ID_FK">{{Shifts.Car_ID_FK}}</td>
+                    <td class="Shift_Request_Number">{{Shifts.Shift_Request_Number}}</td>
+                    <td class="Shift_Start">{{Shifts.Shift_Start}}</td>
+                    <td class="Shift_End">{{Shifts.Shift_End}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/editshift',Shifts.Shift_ID_PK]"
+            routerLinkActive="active">Edit</button>
+        <button type="button" class="btn btn-light" id="delete"
+            (click)="deleteShifts(Shifts.Shift_ID_PK)">delete</button>
+    </div>
+</div>
+<div class="Shifts">
+    <a class="btn btn-light" id="Add" routerLink="/addshitf">Add New shift</a>
+</div>

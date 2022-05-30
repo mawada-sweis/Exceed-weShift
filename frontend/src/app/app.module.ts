@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, CarsComponent, CustomersComponent,DriverComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -24,6 +24,18 @@ import { FeedbackComponent } from './dashboard/feedback/feedback.component';
 import { RequestComponent } from './dashboard/request/request.component';
 import { SalaryComponent } from './dashboard/salary/salary.component';
 import { ShiftComponent } from './dashboard/shift/shift.component';
+import { AddShiftComponent } from './dashboard/shift/add-shift/add-shift.component';
+import { ShiftListComponent } from './dashboard/shift/shift-list/shift-list.component';
+import { EditShiftComponent } from './dashboard/shift/edit-shift/edit-shift.component';
+import { CarListComponent } from './dashboard/car/car-list/car-list.component';
+import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
+import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
+import { AddDriverComponent } from './add-driver/add-driver.component';
+import { EditDriverComponent } from './edit-driver/edit-driver.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
+import { AddAdminComponent } from './add-admin/add-admin.component';
+import { EditAdminComponent } from './edit-admin/edit-admin.component';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +58,22 @@ import { ShiftComponent } from './dashboard/shift/shift.component';
     FeedbackComponent,
     RequestComponent,
     SalaryComponent,
-    ShiftComponent
+    ShiftComponent,
+    CustomersComponent,
+    CarsComponent,
+    DriverComponents,
+    AddShiftComponent,
+    ShiftListComponent,
+    EditShiftComponent,
+    CarListComponent,
+    AddCarComponent,
+    EditCarComponent,
+    AddDriverComponent,
+    EditDriverComponent,
+    AdminListComponent,
+    AddAdminComponent,
+    EditAdminComponent
+
   ],
   imports: [
     BrowserModule,

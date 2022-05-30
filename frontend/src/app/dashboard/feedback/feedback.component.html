@@ -1,1 +1,37 @@
-<p>feedback works!</p>
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style=" height: 230px;   background-image: url(https://cdni.iconscout.com/illustration/premium/thumb/taxi-travelers-rate-the-taxi-service-5066976-4246753.png)" >
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                  <!-- page banner cont -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <br><br><br>
+  </section>
+<ul class="horizontal-list">
+    <li>Feedback #</li>
+    <li>Custmor Email</li>
+    <li>Feedback</li>
+    <li>Customer Satisfaction</li>
+
+ 
+  </ul>
+<div class="feedback-list">
+    <div class="list-item" *ngFor="let Feedback of FeedbackList">
+        <table class="users">
+
+            <tbody>
+                <tr>
+        <td>{{Feedback.Feedback_ID}}</td>
+        <td>{{Feedback.Custmor_ID}}</td>
+        <td>{{Feedback.Feedback}}</td>
+        <td>{{Feedback.Customer_Satisfaction}}</td>
+    </tr>
+</tbody>
+    </table>
+        <br>
+        <button type="button" class="btn btn-light" id="delete" (click)="deleteFeedback(Feedback.Feedback_ID)">delete</button>
+      </div>
+  </div>
+  

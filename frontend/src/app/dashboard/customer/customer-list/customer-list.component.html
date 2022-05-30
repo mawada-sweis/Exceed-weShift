@@ -1,0 +1,41 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style=" height: 230px;width: 1300px;   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxev4JB4JI-K8yFiLPGL6y_hNbJrgtY3C8TfRsRRrhKTaPFF0COvCWjpAzhLeOSIE4D4&usqp=CAU)" >
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                  <!-- page banner cont -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <br><br><br>
+  </section>
+<ul class="horizontal-list">
+    <li>Name</li>
+    <li>Phone</li>
+    <li>Email</li>
+    <li>City</li>
+    <li>Active</li>
+ 
+  </ul>
+<div class="customer-list">
+    <div class="list-item" *ngFor="let Customer of CustomersList">
+        <table class="users">
+
+            <tbody>
+                <tr>
+        <td class="Customer-Name">{{Customer.Customer_Name}}</td>
+        <td class="Customer-Phone">{{Customer.Customer_Phone}}</td>
+        <td class="Customer-Email">{{Customer.Customer_Email_PK}}</td>
+        <td class="Customer-City">{{Customer.Customer_City}}</td>
+        <td class="Customer-Active">{{Customer.Customer_Active}}</td>
+    </tr>
+</tbody>
+    </table>
+        <br>
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/editcustomer', Customer.Customer_Email_PK]" routerLinkActive="active" >Edit</button>
+        <button type="button" class="btn btn-light" id="delete" (click)="deleteCustomer(Customer.Customer_Email_PK)">delete</button>
+      </div>
+  </div>
+  <div class="Customer">
+    <a class="btn btn-light" id="Add" routerLink="/addcustomer">Add New Customer</a>
+  </div>
