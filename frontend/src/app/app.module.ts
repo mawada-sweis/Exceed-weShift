@@ -36,6 +36,7 @@ import { AdminListComponent } from './admin-list/admin-list.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { EditAdminComponent } from './edit-admin/edit-admin.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
