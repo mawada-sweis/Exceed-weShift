@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppRoutingModule, CarsComponent, CustomersComponent } from './app-routing.module';
+import { AppRoutingModule, CarsComponent, CustomersComponent,DriverComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ServicesComponent } from './homepage/services/services.component';
@@ -30,6 +30,11 @@ import { EditShiftComponent } from './dashboard/shift/edit-shift/edit-shift.comp
 import { CarListComponent } from './dashboard/car/car-list/car-list.component';
 import { AddCarComponent } from './dashboard/car/add-car/add-car.component';
 import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
+import { AddDriverComponent } from './add-driver/add-driver.component';
+import { EditDriverComponent } from './edit-driver/edit-driver.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
+import { AddAdminComponent } from './add-admin/add-admin.component';
+import { EditAdminComponent } from './edit-admin/edit-admin.component';
 
 
 @NgModule({
@@ -56,12 +61,18 @@ import { EditCarComponent } from './dashboard/car/edit-car/edit-car.component';
     ShiftComponent,
     CustomersComponent,
     CarsComponent,
+    DriverComponents,
     AddShiftComponent,
     ShiftListComponent,
     EditShiftComponent,
     CarListComponent,
     AddCarComponent,
-    EditCarComponent
+    EditCarComponent,
+    AddDriverComponent,
+    EditDriverComponent,
+    AdminListComponent,
+    AddAdminComponent,
+    EditAdminComponent
 
   ],
   imports: [

@@ -1,0 +1,39 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style=" height: 230px;   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuF-997itpsHJEiCakrQakIRGGVFRq-aVm9nQpLQ44el9Xf65JXluKxphQmVVbu4INNGg&usqp=CAU)" >
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                  <!-- page banner cont -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <br><br><br>
+  </section>
+<ul class="horizontal-list">
+    <li >Name</li>
+    <li>Email</li>
+    <li>Phone#</li>
+    <li>City</li>
+ 
+  </ul>
+<div class="Admin-list">
+    <div class="list-item" *ngFor="let Admin of AdminsList">
+        <table class="users">
+
+            <tbody>
+                <tr>
+        <td class="Admin-Name">{{Admin.Admin_Name}}</td>
+        <td class="Admin-Email">{{Admin.Admin_Email}}</td>
+        <td class="Admin-Phone">{{Admin.Admin_Phone}}</td>
+        <td class="Admin-City">{{Admin.Admin_City}}</td>
+    </tr>
+</tbody>
+    </table>
+        <br>
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/Edit-Admin',Admin.Admin_Email]" routerLinkActive="active" >Edit</button>
+        <button type="button" class="btn btn-light" id="delete" (click)="deleteAdmin(Admin.Admin_Email)">delete</button>
+      </div>
+  </div>
+  <div class="Admin">
+    <a class="btn btn-light" id="Add" routerLink="/Add-Admin">Add New Admin</a>
+  </div>

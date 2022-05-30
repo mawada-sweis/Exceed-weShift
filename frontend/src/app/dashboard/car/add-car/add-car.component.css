@@ -20,3 +20,10 @@
 .button-A:hover {
     background-color: rgb(236, 235, 235);
 }
+.bg-cover {
+    background-attachment: static;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1100px;
+}
