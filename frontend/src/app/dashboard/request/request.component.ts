@@ -77,7 +77,7 @@ export class RequestComponent implements OnInit {
       Request_Is_Luggage: this.Request_Is_Luggage.value,
       Request_All_One: this.Request_All_One.value,
     }
-    console.log(body)
+
     this.http.post(`http://localhost:3030/request/admin/add`, body).subscribe((data: any) => {
       this.getAllRequest();
     });
@@ -111,7 +111,6 @@ export class RequestComponent implements OnInit {
   saveUpdate(){
 
     if(!confirm("Are you sure do you want to update this Request")) return;
-
     let body = {
       Request_ID_PK: this.Request_ID.value,
       Driver_ID_FK: this.Driver_ID.value,
@@ -128,10 +127,8 @@ export class RequestComponent implements OnInit {
       Request_Is_Luggage: this.Request_Is_Luggage.value,
       Request_All_One: this.Request_All_One.value,
     }
-    this.cancelUpdate();
-    
-    console.log(body)
 
+    this.cancelUpdate();
     this.http.put(`http://localhost:3030/request/admin/update`, body).subscribe((data: any) => {
       this.getAllRequest();
     });
