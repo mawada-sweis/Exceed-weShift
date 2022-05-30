@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-// Require Salary controller modules.
+// Require controller modules.
 var salary_controller = require('../controllers/salaryController');
-
-// POST request for add salary.
-router.get('/get', salary_controller.getSalary);
-router.post('/add', salary_controller.addSalary);
-router.put('/update', salary_controller.updateSalary);
-router.delete('/delete/:id', salary_controller.deleteSalary);
+router.get('/', salary_controller.salary);
+router.get('/getSalaryID', salary_controller.getSalaryID);
+router.post('/addSalary', salary_controller.addSalary);
+router.delete('/deleteSalary', salary_controller.deleteSalary);
+router.put('/updateSalary', salary_controller.updateSalary);
 
 module.exports = router;
