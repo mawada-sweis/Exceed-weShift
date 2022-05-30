@@ -18,7 +18,7 @@ exports.dashboard = async(req, res) => {
  * CRUD - Read  
  */
 exports.activeCustomers = (req, res) => {
-    let getActive = 'SELECT COUNT(*) FROM `Customer` WHERE Customer_Active = "yes" ';
+    let getActive = 'SELECT COUNT(*) FROM `Customer` WHERE Customer_Active = "Active" ';
     con.query(getActive, (error, results) => {
         if (error) {
             console.error(error.message);
