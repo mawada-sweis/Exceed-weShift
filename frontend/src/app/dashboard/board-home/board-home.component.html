@@ -1,6 +1,33 @@
-<p>board-home works!</p>
-
-<nav> 
+<nav>
     <button routerLink="/Admin-list">Admin list</button>
-  </nav>
-    <router-outlet></router-outlet>
+</nav>
+
+<div class="row">
+    <div class="col-sm-3">
+        <app-number-requests></app-number-requests>
+    </div>
+    <div class="col-sm-3">
+        <app-active-customers></app-active-customers>
+
+    </div>
+
+    <div class="col-sm-3">
+        <app-next-donation> </app-next-donation>
+    </div>
+    <div class="col-sm-3">
+
+        <app-revenue> </app-revenue>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-6">
+        <app-current-shift></app-current-shift>
+    </div>
+    <div class="col-sm-6">
+
+        <app-shift-info></app-shift-info>
+    </div>
+</div>

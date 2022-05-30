@@ -30,7 +30,6 @@ export class AddShiftComponent implements OnInit {
     let DriverIDFK = this.AddShiftForm.get('Driver_ID_FK')?.value
     let CarIDFK = this.AddShiftForm.get('Car_ID_FK')?.value
     let ShiftRequestNumber = this.AddShiftForm.get('Shift_Request_Number')?.value
-    let InsuranceLicense = this.AddShiftForm.get('Insurance_License')?.value
     let ShiftStart = this.AddShiftForm.get('Shift_Start')?.value
     let ShiftEnd = this.AddShiftForm.get('Shift_End')?.value
 
@@ -39,13 +38,12 @@ export class AddShiftComponent implements OnInit {
       Driver_ID_FK: DriverIDFK,
       Car_ID_FK: CarIDFK,
       Shift_Request_Number: ShiftRequestNumber,
-      Insurance_License: InsuranceLicense,
       Shift_Start: ShiftStart,
       Shift_End: ShiftEnd
 
     }
 
-    this._http.post("http://localhost:3030/shift/", body)
+    this._http.post("http://localhost:3030/shift/add", body)
       .subscribe((x) => console.log(x))
   }
 }
