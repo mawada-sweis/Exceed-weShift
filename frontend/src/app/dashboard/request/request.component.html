@@ -46,7 +46,7 @@
                         <th><input [formControl]="Request_All_One" type="number" style="width: 50px" required></th>
                         <td *ngIf="request"><button class="btn btn-success" (click)="addRequest()">Request</button></td>
                         <td *ngIf="save" ><button type="button" class="btn btn-primary" (click)="saveUpdate()" >Save</button></td>
-                        <td *ngIf="cancel"><button type="button" class="btn btn-secondary">Cancel</button></td>
+                        <td *ngIf="cancel"><button type="button" class="btn btn-secondary" (click)="cancelUpdate()" >Cancel</button></td>
                         </tr>
                       </thead>
                       <tbody>

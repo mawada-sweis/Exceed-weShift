@@ -128,7 +128,16 @@ export class RequestComponent implements OnInit {
       Request_Is_Luggage: this.Request_Is_Luggage.value,
       Request_All_One: this.Request_All_One.value,
     }
+    this.cancelUpdate();
+    
+    console.log(body)
 
+    this.http.put(`http://localhost:3030/request/admin/update`, body).subscribe((data: any) => {
+      this.getAllRequest();
+    });
+  }
+
+  cancelUpdate(){
     this.Request_ID.setValue('');
     this.Driver_ID.setValue('');
     this.Customer_ID.setValue('');
@@ -148,11 +157,6 @@ export class RequestComponent implements OnInit {
     this.cancel = false;
     this.request = true;
     this.req_id = true;
-    console.log(body)
 
-    this.http.put(`http://localhost:3030/request/admin/update`, body).subscribe((data: any) => {
-      this.getAllRequest();
-    });
   }
-
 }
