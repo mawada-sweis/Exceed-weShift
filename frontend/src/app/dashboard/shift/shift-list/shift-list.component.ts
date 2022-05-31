@@ -22,7 +22,7 @@ export class ShiftListComponent implements OnInit {
   }
 
   deleteShifts(id: any): void {
-    let url = "http://localhost:3030/shift/delete" + id;
+    let url = "http://localhost:3030/shift/delete/" + id;
     this._http.delete(url).subscribe(data => { console.log(data) })
     location.reload();
     console.log(this.ShiftList);

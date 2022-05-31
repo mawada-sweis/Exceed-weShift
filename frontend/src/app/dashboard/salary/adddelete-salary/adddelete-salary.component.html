@@ -1,0 +1,42 @@
+<section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style=" height: 230px;   background-image: url(https://media.istockphoto.com/vectors/set-of-diverse-taxi-cars-and-drivers-funny-taxi-driver-posing-near-vector-id1136287628)">
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- page banner cont -->
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+    <br><br><br>
+</section>
+<ul class="horizontal-list">
+    <li>Salary ID</li>
+    <li>Request_Number</li>
+    <li>Next_Donation</li>
+    <li>Frequency</li>
+    <li>Next_Salary</li>
+</ul>
+<div class="car-list">
+    <div class="list-item" *ngFor="let salary of salaries">
+        <table class="users">
+
+            <tbody>
+                <tr>
+                    <td>{{salary.salary_ID_FK}}</td>
+                    <td>{{salary.Request_Number}}</td>
+                    <td>{{salary.Next_Donation}}</td>
+                    <td>{{salary.Frequency}}</td>
+                    <td>{{salary.Next_Salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="button" class="btn btn-light" id="edit" [routerLink]="['/edit-salary',salary.salary_ID_FK]" routerLinkActive="active">Edit</button>
+        <button type="button" class="btn btn-light" id="delete" (click)="deleteSalary(salary.salary_ID_FK)">delete</button>
+    </div>
+</div>
+<div class="salary">
+    <a class="btn btn-light" id="Add" routerLink="/salary">Add Salary</a>
+</div>

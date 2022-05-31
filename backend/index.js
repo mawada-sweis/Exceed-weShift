@@ -39,19 +39,26 @@ var DriverRouter = require('./routes/DriverRouter');
 
 
 // Import salary routes
-var salaryRouter = require('./routes/salaryRouter');  
+var salaryRouter = require('./routes/salaryRouter');
 
 // Import customer routes
-var CustomerRouter = require('./routes/CustomerRouter');  
+var CustomerRouter = require('./routes/CustomerRouter');
 
 // Import feedback routes
-var FeedbackRouter = require('./routes/FeedbackRouter');  
+var FeedbackRouter = require('./routes/FeedbackRouter');
 
 // Import car routes
-var CarRouter = require('./routes/CarRouter'); 
+var CarRouter = require('./routes/CarRouter');
 
 // Import shift routes
 var ShiftsRouter = require('./routes/ShiftsRouter');
+
+// Import salary routes
+var requestAdminRouter = require('./routes/requestByAdminRouter');  
+
+// Import salary routes
+var requestCustomerRouter = require('./routes/requestByCustomerRouter');  
+
 
 // Using the index routes
 app.use('/', indexRouter);
@@ -80,3 +87,12 @@ app.use('/car', CarRouter);
 
 // Using the shifts routes
 app.use('/shift',ShiftsRouter);
+
+// Using the salary routes
+app.use('/request/admin', requestAdminRouter);
+
+// Using the salary routes
+app.use('/request/customer', requestCustomerRouter);
+
+var dashboardRouter = require('./routes/dashboard');
+app.use('/dashboard', dashboardRouter);

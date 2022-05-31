@@ -35,6 +35,15 @@ import { EditDriverComponent } from './edit-driver/edit-driver.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { EditAdminComponent } from './edit-admin/edit-admin.component';
+import { ShiftInfoComponent } from './dashboard/board-home/shift-info/shift-info.component';
+import { ActiveCustomersComponent } from './dashboard/board-home/active-customers/active-customers.component';
+import { NumberRequestsComponent } from './dashboard/board-home/number-requests/number-requests.component';
+import { CurrentShiftComponent } from './dashboard/board-home/current-shift/current-shift.component';
+import { NextDonationComponent } from './dashboard/board-home/next-donation/next-donation.component';
+import { RevenueComponent } from './dashboard/board-home/revenue/revenue.component';
+import { EditSalaryComponent } from './dashboard/salary/edit-salary/edit-salary.component';
+import { AdddeleteSalaryComponent } from './dashboard/salary/adddelete-salary/adddelete-salary.component';
+import { SalaryListComponent } from './dashboard/salary/salary-list/salary-list.component';
 
 
 @NgModule({
@@ -72,7 +81,16 @@ import { EditAdminComponent } from './edit-admin/edit-admin.component';
     EditDriverComponent,
     AdminListComponent,
     AddAdminComponent,
-    EditAdminComponent
+    EditAdminComponent,
+    ShiftInfoComponent,
+    ActiveCustomersComponent,
+    NumberRequestsComponent,
+    CurrentShiftComponent,
+    NextDonationComponent,
+    RevenueComponent,
+    EditSalaryComponent,
+    AdddeleteSalaryComponent,
+    SalaryListComponent
 
   ],
   imports: [
